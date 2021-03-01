@@ -1,4 +1,4 @@
-# Alltheprogramming
+# All the programming
 All the programming
 
 Wiki: https://github.com/BakxY/Alltheprogramming
