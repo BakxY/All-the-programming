@@ -1,0 +1,1226 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    blink.o(i.main) refers to p0p1shell.o(i.InitTouchP0P1) for InitTouchP0P1
+    blink.o(i.main) refers to p0p1shell.o(i.delay_ms) for delay_ms
+    startup_stm32f10x_cl.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_cl.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_cl.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_cl.o(RESET) refers to startup_stm32f10x_cl.o(STACK) for __initial_sp
+    startup_stm32f10x_cl.o(RESET) refers to startup_stm32f10x_cl.o(.text) for Reset_Handler
+    startup_stm32f10x_cl.o(RESET) refers to p0p1shell.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f10x_cl.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_cl.o(.text) refers to system_stm32f10x.o(i.SystemInit) for SystemInit
+    startup_stm32f10x_cl.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f10x_cl.o(.text) refers to startup_stm32f10x_cl.o(HEAP) for Heap_Mem
+    startup_stm32f10x_cl.o(.text) refers to startup_stm32f10x_cl.o(STACK) for Stack_Mem
+    system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
+    p0p1shell.o(i.ClearTouchP0) refers to p0p1shell.o(.data) for TouchP0
+    p0p1shell.o(i.DrawPit) refers to touchgrafik.o(i.plotFilledRect) for plotFilledRect
+    p0p1shell.o(i.InitP0P1) refers to p0p1shell.o(.data) for TouchP0
+    p0p1shell.o(i.InitTouchP0P1) refers to p0p1shell.o(i.InitP0P1) for InitP0P1
+    p0p1shell.o(i.InitTouchP0P1) refers to touchgrafik.o(i.InitTouchScreen) for InitTouchScreen
+    p0p1shell.o(i.InitTouchP0P1) refers to p0p1shell.o(i.PrintHeadline) for PrintHeadline
+    p0p1shell.o(i.InitTouchP0P1) refers to p0p1shell.o(i.ShowMSBLSB) for ShowMSBLSB
+    p0p1shell.o(i.InitTouchP0P1) refers to p0p1shell.o(i.ShowP0P1Pits) for ShowP0P1Pits
+    p0p1shell.o(i.InitTouchP0P1) refers to p0p1shell.o(i.TSC_P0P1Refresh) for TSC_P0P1Refresh
+    p0p1shell.o(i.InitTouchP0P1) refers to p0p1shell.o(.data) for P0P1xch
+    p0p1shell.o(i.PitCatched) refers to p0p1shell.o(.data) for TSCx
+    p0p1shell.o(i.PrintHeadline) refers to touchgrafik.o(i.setScreenDir) for setScreenDir
+    p0p1shell.o(i.PrintHeadline) refers to touchgrafik.o(i.textxy) for textxy
+    p0p1shell.o(i.PrintHeadline) refers to touchgrafik.o(i.lcd_icon_Ver) for lcd_icon_Ver
+    p0p1shell.o(i.PrintHeadline) refers to touchgrafik.o(i.line) for line
+    p0p1shell.o(i.PrintHeadline) refers to touchprint.o(i.setTextcolor) for setTextcolor
+    p0p1shell.o(i.PrintHeadline) refers to touchprint.o(i.printAt) for printAt
+    p0p1shell.o(i.PrintHeadline) refers to p0p1shell.o(.data) for TypePit
+    p0p1shell.o(i.SetTouchP0) refers to p0p1shell.o(.data) for TouchP0
+    p0p1shell.o(i.ShowMSBLSB) refers to touchgrafik.o(i.lcd_icon_Ver) for lcd_icon_Ver
+    p0p1shell.o(i.ShowMSBLSB) refers to touchgrafik.o(i.textxy) for textxy
+    p0p1shell.o(i.ShowMSBLSB) refers to p0p1shell.o(.data) for MSBLSBxch
+    p0p1shell.o(i.ShowP0P1Pits) refers to touchgrafik.o(i.rectan) for rectan
+    p0p1shell.o(i.ShowP0P1Pits) refers to p0p1shell.o(i.DrawPit) for DrawPit
+    p0p1shell.o(i.ShowP0P1Pits) refers to p0p1shell.o(.data) for P0P1xch
+    p0p1shell.o(i.SysTick_Handler) refers to p0p1shell.o(i.TouchP0P1Service) for TouchP0P1Service
+    p0p1shell.o(i.SysTick_Handler) refers to p0p1shell.o(.data) for TimingDelay
+    p0p1shell.o(i.TSC_P0P1Refresh) refers to p0p1shell.o(i.DrawPit) for DrawPit
+    p0p1shell.o(i.TSC_P0P1Refresh) refers to p0p1shell.o(.data) for newP1
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.getTSCtouched) for getTSCtouched
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.getTSCxy) for getTSCxy
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.getTSCx) for getTSCx
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.getTSCy) for getTSCy
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.PitCatched) for PitCatched
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.clearScreen) for clearScreen
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.setScreenDir) for setScreenDir
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.PrintHeadline) for PrintHeadline
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.ShowMSBLSB) for ShowMSBLSB
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.ShowP0P1Pits) for ShowP0P1Pits
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.plotFilledRect) for plotFilledRect
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.lcd_icon_Ver) for lcd_icon_Ver
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.lcd_printStr_Ver) for lcd_printStr_Ver
+    p0p1shell.o(i.TSC_TouchHandle) refers to touchgrafik.o(i.line) for line
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.DrawPit) for DrawPit
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.ClearTouchP0) for ClearTouchP0
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(i.SetTouchP0) for SetTouchP0
+    p0p1shell.o(i.TSC_TouchHandle) refers to p0p1shell.o(.data) for oldTouchDown
+    p0p1shell.o(i.TouchP0P1Service) refers to touchgrafik.o(i.getScreenDir) for getScreenDir
+    p0p1shell.o(i.TouchP0P1Service) refers to touchgrafik.o(i.setScreenDir) for setScreenDir
+    p0p1shell.o(i.TouchP0P1Service) refers to p0p1shell.o(i.TSC_TouchHandle) for TSC_TouchHandle
+    p0p1shell.o(i.TouchP0P1Service) refers to p0p1shell.o(i.TSC_P0P1Refresh) for TSC_P0P1Refresh
+    p0p1shell.o(i.TouchP0P1Service) refers to p0p1shell.o(.data) for RefreshTime
+    p0p1shell.o(i.delay_ms) refers to p0p1shell.o(.data) for TimingDelay
+    touchgrafik.o(i.GLCD_SetCursor) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.GLCD_SetCursor) refers to touchgrafik.o(i.GLCD_Write_Data) for GLCD_Write_Data
+    touchgrafik.o(i.GLCD_SetX) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.GLCD_SetX) refers to touchgrafik.o(i.GLCD_Write_Data) for GLCD_Write_Data
+    touchgrafik.o(i.GLCD_SetY) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.GLCD_SetY) refers to touchgrafik.o(i.GLCD_Write_Data) for GLCD_Write_Data
+    touchgrafik.o(i.GLCD_Write_Command) refers to stm32f10x_gpio.o(i.GPIO_WriteBit) for GPIO_WriteBit
+    touchgrafik.o(i.GLCD_Write_Command) refers to stm32f10x_spi.o(i.SPI_I2S_SendData) for SPI_I2S_SendData
+    touchgrafik.o(i.GLCD_Write_Command) refers to stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    touchgrafik.o(i.GLCD_Write_Data) refers to stm32f10x_gpio.o(i.GPIO_WriteBit) for GPIO_WriteBit
+    touchgrafik.o(i.GLCD_Write_Data) refers to stm32f10x_spi.o(i.SPI_I2S_SendData) for SPI_I2S_SendData
+    touchgrafik.o(i.GLCD_Write_Data) refers to stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus) for SPI_I2S_GetFlagStatus
+    touchgrafik.o(i.GLCD_Write_Data16) refers to touchgrafik.o(i.GLCD_Write_Data) for GLCD_Write_Data
+    touchgrafik.o(i.Get_Status_Touch) refers to stm32f10x_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    touchgrafik.o(i.InitTouchScreen) refers to touchgrafik.o(i.Initial_GLCD_Hardware) for Initial_GLCD_Hardware
+    touchgrafik.o(i.InitTouchScreen) refers to touchgrafik.o(i.Initial_GLCD_Vertikal) for Initial_GLCD_Vertikal
+    touchgrafik.o(i.InitTouchScreen) refers to touchgrafik.o(.data) for An
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_gpio.o(i.GPIO_WriteBit) for GPIO_WriteBit
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_gpio.o(i.GPIO_PinRemapConfig) for GPIO_PinRemapConfig
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_spi.o(i.SPI_I2S_DeInit) for SPI_I2S_DeInit
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_spi.o(i.SPI_Init) for SPI_Init
+    touchgrafik.o(i.Initial_GLCD_Hardware) refers to stm32f10x_spi.o(i.SPI_Cmd) for SPI_Cmd
+    touchgrafik.o(i.Initial_GLCD_Vertikal) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.Initial_GLCD_Vertikal) refers to touchgrafik.o(i.GLCD_Write_Data) for GLCD_Write_Data
+    touchgrafik.o(i.Initial_GLCD_Vertikal) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.Initial_GLCD_Vertikal) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    touchgrafik.o(i.Initial_GLCD_Vertikal) refers to touchgrafik.o(.data) for t
+    touchgrafik.o(i.TCS_Average_X_Y) refers to touchgrafik.o(.bss) for buf_adc_X
+    touchgrafik.o(i.TCS_Average_X_Y) refers to touchgrafik.o(.data) for ave_adc_X
+    touchgrafik.o(i.TCS_SPI_ReadPos) refers to touchgrafik.o(i.Get_Status_Touch) for Get_Status_Touch
+    touchgrafik.o(i.TCS_SPI_ReadPos) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    touchgrafik.o(i.TCS_SPI_ReadPos) refers to touchgrafik.o(i.TCS_SPI_Write) for TCS_SPI_Write
+    touchgrafik.o(i.TCS_SPI_ReadPos) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    touchgrafik.o(i.TCS_SPI_ReadPos) refers to touchgrafik.o(.data) for dif_adc_X
+    touchgrafik.o(i.TCS_SPI_Write) refers to stm32f10x_gpio.o(i.GPIO_WriteBit) for GPIO_WriteBit
+    touchgrafik.o(i.TCS_SPI_Write) refers to stm32f10x_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    touchgrafik.o(i.TCS_Set_Matrix_Ver) refers to touchgrafik.o(.bss) for tcs_ave_X
+    touchgrafik.o(i.TCS_Set_Matrix_Ver) refers to touchgrafik.o(.data) for divider
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.plot_mark_Ver) for plot_mark_Ver
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.lcd_printStr_Ver) for lcd_printStr_Ver
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.Get_Status_Touch) for Get_Status_Touch
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.TCS_SPI_ReadPos) for TCS_SPI_ReadPos
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.TCS_Average_X_Y) for TCS_Average_X_Y
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.bg_color) for bg_color
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(i.TCS_Set_Matrix_Ver) for TCS_Set_Matrix_Ver
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(.data) for dif_adc_X
+    touchgrafik.o(i.Touch_Calibrate_Ver) refers to touchgrafik.o(.bss) for buf_adc_X
+    touchgrafik.o(i.bg_color) refers to touchgrafik.o(i.GLCD_SetCursor) for GLCD_SetCursor
+    touchgrafik.o(i.bg_color) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.bg_color) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.circle) refers to touchgrafik.o(i.line) for line
+    touchgrafik.o(i.circle) refers to touchgrafik.o(i.plotDot) for plotDot
+    touchgrafik.o(i.clearScreen) refers to touchgrafik.o(i.plotFilledRect) for plotFilledRect
+    touchgrafik.o(i.dec_to_ascii) refers to touchgrafik.o(.data) for num1
+    touchgrafik.o(i.ellipse) refers to fflt_clz.o(x$fpl$fflt) for __aeabi_i2f
+    touchgrafik.o(i.ellipse) refers to fmul.o(x$fpl$fmul) for __aeabi_fmul
+    touchgrafik.o(i.ellipse) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
+    touchgrafik.o(i.ellipse) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    touchgrafik.o(i.ellipse) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    touchgrafik.o(i.ellipse) refers to dfix.o(x$fpl$dfix) for __aeabi_d2iz
+    touchgrafik.o(i.ellipse) refers to touchgrafik.o(i.line) for line
+    touchgrafik.o(i.ellipse) refers to touchgrafik.o(i.plotDot) for plotDot
+    touchgrafik.o(i.ellipse) refers to faddsub_clz.o(x$fpl$fadd) for __aeabi_fadd
+    touchgrafik.o(i.ellipse) refers to fleqf.o(x$fpl$fleqf) for __aeabi_cfcmple
+    touchgrafik.o(i.ellipse) refers to faddsub_clz.o(x$fpl$fsub) for __aeabi_fsub
+    touchgrafik.o(i.ellipse) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    touchgrafik.o(i.ellipse) refers to frleqf.o(x$fpl$frleqf) for __aeabi_cfrcmple
+    touchgrafik.o(i.getScreenDir) refers to touchgrafik.o(.data) for ScreenDir
+    touchgrafik.o(i.getTSCtouched) refers to stm32f10x_gpio.o(i.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    touchgrafik.o(i.getTSCx) refers to touchgrafik.o(.data) for TSC_X
+    touchgrafik.o(i.getTSCxy) refers to touchgrafik.o(i.TCS_SPI_ReadPos) for TCS_SPI_ReadPos
+    touchgrafik.o(i.getTSCxy) refers to touchgrafik.o(i.Get_Status_Touch) for Get_Status_Touch
+    touchgrafik.o(i.getTSCxy) refers to touchgrafik.o(i.TCS_Average_X_Y) for TCS_Average_X_Y
+    touchgrafik.o(i.getTSCxy) refers to touchgrafik.o(.data) for dif_adc_X
+    touchgrafik.o(i.getTSCxy) refers to touchgrafik.o(.bss) for buf_adc_X
+    touchgrafik.o(i.getTSCy) refers to touchgrafik.o(.data) for TSC_Y
+    touchgrafik.o(i.lcd_icon_Ver) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.lcd_icon_Ver) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.lcd_icon_Ver) refers to touchgrafik.o(.constdata) for TouchIcon
+    touchgrafik.o(i.lcd_print3Cha_Ver) refers to touchgrafik.o(i.text_7x11) for text_7x11
+    touchgrafik.o(i.lcd_printStr_Ver) refers to touchgrafik.o(i.text_7x11) for text_7x11
+    touchgrafik.o(i.line) refers to touchgrafik.o(i.plotDot) for plotDot
+    touchgrafik.o(i.plotDot) refers to touchgrafik.o(i.GLCD_SetCursor) for GLCD_SetCursor
+    touchgrafik.o(i.plotDot) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.plotDot) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.plotDot) refers to touchgrafik.o(.data) for ScreenDir
+    touchgrafik.o(i.plotFilledRect) refers to touchgrafik.o(i.getScreenDir) for getScreenDir
+    touchgrafik.o(i.plotFilledRect) refers to touchgrafik.o(i.GLCD_SetCursor) for GLCD_SetCursor
+    touchgrafik.o(i.plotFilledRect) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.plotFilledRect) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.plot_mark_Ver) refers to touchgrafik.o(i.GLCD_SetCursor) for GLCD_SetCursor
+    touchgrafik.o(i.plot_mark_Ver) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.plot_mark_Ver) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.plot_picture_Hor) refers to touchgrafik.o(i.GLCD_SetY) for GLCD_SetY
+    touchgrafik.o(i.plot_picture_Hor) refers to touchgrafik.o(i.GLCD_SetX) for GLCD_SetX
+    touchgrafik.o(i.plot_picture_Hor) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.plot_picture_Hor) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.plot_picture_Ver) refers to touchgrafik.o(i.GLCD_SetY) for GLCD_SetY
+    touchgrafik.o(i.plot_picture_Ver) refers to touchgrafik.o(i.GLCD_SetX) for GLCD_SetX
+    touchgrafik.o(i.plot_picture_Ver) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.plot_picture_Ver) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.plot_tab_Ver) refers to touchgrafik.o(i.GLCD_SetCursor) for GLCD_SetCursor
+    touchgrafik.o(i.plot_tab_Ver) refers to touchgrafik.o(i.GLCD_Write_Command) for GLCD_Write_Command
+    touchgrafik.o(i.plot_tab_Ver) refers to touchgrafik.o(i.GLCD_Write_Data16) for GLCD_Write_Data16
+    touchgrafik.o(i.rectan) refers to touchgrafik.o(i.plotDot) for plotDot
+    touchgrafik.o(i.rectan) refers to touchgrafik.o(i.line) for line
+    touchgrafik.o(i.setScreenDir) refers to touchgrafik.o(.data) for ScreenDir
+    touchgrafik.o(i.text_7x11) refers to touchgrafik.o(i.plotDot) for plotDot
+    touchgrafik.o(i.text_7x11) refers to touchgrafik.o(.constdata) for ascii_7x11
+    touchgrafik.o(i.textxy) refers to touchgrafik.o(i.text_7x11) for text_7x11
+    touchprint.o(i.print) refers to touchgrafik.o(i.textxy) for textxy
+    touchprint.o(i.print) refers to touchprint.o(.data) for txtCol
+    touchprint.o(i.printAt) refers to touchprint.o(i.print) for print
+    touchprint.o(i.printAt) refers to touchprint.o(.data) for txtX
+    touchprint.o(i.printBin) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    touchprint.o(i.printBin) refers to touchgrafik.o(i.getScreenDir) for getScreenDir
+    touchprint.o(i.printBin) refers to touchprint.o(i.printLn) for printLn
+    touchprint.o(i.printBin) refers to touchprint.o(i.print) for print
+    touchprint.o(i.printBin) refers to touchprint.o(.data) for txtX
+    touchprint.o(i.printDec) refers to touchprint.o(i.print) for print
+    touchprint.o(i.printHex) refers to touchprint.o(i.print) for print
+    touchprint.o(i.printLn) refers to touchprint.o(i.print) for print
+    touchprint.o(i.printLn) refers to touchgrafik.o(i.getScreenDir) for getScreenDir
+    touchprint.o(i.printLn) refers to touchprint.o(.data) for txtY
+    touchprint.o(i.setTextcolor) refers to touchprint.o(.data) for txtCol
+    stm32f10x_gpio.o(i.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.data) for APBAHBPrescTable
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f10x_spi.o(i.I2S_Init) refers to stm32f10x_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_spi.o(i.SPI_I2S_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    daddsub_clz.o(x$fpl$dadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$dadd) refers to daddsub_clz.o(x$fpl$dsub) for _dsub1
+    daddsub_clz.o(x$fpl$dadd) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    daddsub_clz.o(x$fpl$dadd) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    daddsub_clz.o(x$fpl$drsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$drsb) refers to daddsub_clz.o(x$fpl$dadd) for _dadd1
+    daddsub_clz.o(x$fpl$drsb) refers to daddsub_clz.o(x$fpl$dsub) for _dsub1
+    daddsub_clz.o(x$fpl$dsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$dsub) refers to daddsub_clz.o(x$fpl$dadd) for _dadd1
+    daddsub_clz.o(x$fpl$dsub) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfix.o(x$fpl$dfix) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfix.o(x$fpl$dfix) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfix.o(x$fpl$dfixr) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfix.o(x$fpl$dfixr) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dflt_clz.o(x$fpl$dfltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dflt_clz.o(x$fpl$dflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dflt_clz.o(x$fpl$dfltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dmul.o(x$fpl$dmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dmul.o(x$fpl$dmul) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    dmul.o(x$fpl$dmul) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    faddsub_clz.o(x$fpl$fadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fadd) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fadd) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    faddsub_clz.o(x$fpl$fadd) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    faddsub_clz.o(x$fpl$frsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$frsb) refers to faddsub_clz.o(x$fpl$fsub) for _fsub1
+    faddsub_clz.o(x$fpl$fsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    faddsub_clz.o(x$fpl$fsub) refers to faddsub_clz.o(x$fpl$fadd) for _fadd1
+    faddsub_clz.o(x$fpl$fsub) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fflt_clz.o(x$fpl$ffltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$fflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fflt_clz.o(x$fpl$ffltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fleqf.o(x$fpl$fleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fleqf.o(x$fpl$fleqf) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    fleqf.o(x$fpl$fleqf) refers to fcmpi.o(x$fpl$fcmpinf) for __fpl_fcmp_Inf
+    fmul.o(x$fpl$fmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fmul.o(x$fpl$fmul) refers to fretinf.o(x$fpl$fretinf) for __fpl_fretinf
+    fmul.o(x$fpl$fmul) refers to fnaninf.o(x$fpl$fnaninf) for __fpl_fnaninf
+    frleqf.o(x$fpl$frleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    frleqf.o(x$fpl$frleqf) refers to fleqf.o(x$fpl$fleqf) for __fpl_fcmple_InfNaN
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    dnaninf.o(x$fpl$dnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dretinf.o(x$fpl$dretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fcmpi.o(x$fpl$fcmpinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fnaninf.o(x$fpl$fnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fretinf.o(x$fpl$fretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to blink.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f10x_cl.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing blink.o(.rev16_text), (4 bytes).
+    Removing blink.o(.revsh_text), (4 bytes).
+    Removing blink.o(.rrx_text), (6 bytes).
+    Removing system_stm32f10x.o(.rev16_text), (4 bytes).
+    Removing system_stm32f10x.o(.revsh_text), (4 bytes).
+    Removing system_stm32f10x.o(.rrx_text), (6 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (256 bytes).
+    Removing system_stm32f10x.o(.data), (20 bytes).
+    Removing p0p1shell.o(.rev16_text), (4 bytes).
+    Removing p0p1shell.o(.revsh_text), (4 bytes).
+    Removing touchgrafik.o(.rev16_text), (4 bytes).
+    Removing touchgrafik.o(.revsh_text), (4 bytes).
+    Removing touchgrafik.o(i.GLCD_SetX), (24 bytes).
+    Removing touchgrafik.o(i.GLCD_SetY), (24 bytes).
+    Removing touchgrafik.o(i.TCS_Set_Matrix_Ver), (480 bytes).
+    Removing touchgrafik.o(i.Touch_Calibrate_Ver), (820 bytes).
+    Removing touchgrafik.o(i.bg_color), (38 bytes).
+    Removing touchgrafik.o(i.circle), (340 bytes).
+    Removing touchgrafik.o(i.dec_to_ascii), (64 bytes).
+    Removing touchgrafik.o(i.ellipse), (1312 bytes).
+    Removing touchgrafik.o(i.lcd_print3Cha_Ver), (70 bytes).
+    Removing touchgrafik.o(i.plot_mark_Ver), (92 bytes).
+    Removing touchgrafik.o(i.plot_picture_Hor), (106 bytes).
+    Removing touchgrafik.o(i.plot_picture_Ver), (108 bytes).
+    Removing touchgrafik.o(i.plot_tab_Ver), (52 bytes).
+    Removing touchprint.o(.rev16_text), (4 bytes).
+    Removing touchprint.o(.revsh_text), (4 bytes).
+    Removing touchprint.o(i.printBin), (192 bytes).
+    Removing touchprint.o(i.printDec), (224 bytes).
+    Removing touchprint.o(i.printHex), (100 bytes).
+    Removing touchprint.o(i.printLn), (68 bytes).
+    Removing stm32f10x_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_AFIODeInit), (20 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_DeInit), (200 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ETH_MediaInterfaceConfig), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EXTILineConfig), (64 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputCmd), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputConfig), (32 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinLockConfig), (18 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputData), (8 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputData), (8 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit), (18 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_StructInit), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_Write), (4 bytes).
+    Removing stm32f10x_rcc.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_rcc.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ADCCLKConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AHBPeriphResetCmd), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearFlag), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_DeInit), (92 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetClocksFreq), (400 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetFlagStatus), (60 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetSYSCLKSource), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HCLKConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSEConfig), (76 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_I2S2CLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_I2S3CLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ITConfig), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSEConfig), (52 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_MCOConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_OTGFSCLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PCLK1Config), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PCLK2Config), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLL2Cmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLL2Config), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLL3Cmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLL3Config), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLLCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PLLConfig), (28 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PREDIV1Config), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_PREDIV2Config), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKConfig), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_SYSCLKConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp), (56 bytes).
+    Removing stm32f10x_rcc.o(.data), (20 bytes).
+    Removing stm32f10x_spi.o(.rev16_text), (4 bytes).
+    Removing stm32f10x_spi.o(.revsh_text), (4 bytes).
+    Removing stm32f10x_spi.o(i.I2S_Cmd), (24 bytes).
+    Removing stm32f10x_spi.o(i.I2S_Init), (304 bytes).
+    Removing stm32f10x_spi.o(i.I2S_StructInit), (20 bytes).
+    Removing stm32f10x_spi.o(i.SPI_BiDirectionalLineConfig), (28 bytes).
+    Removing stm32f10x_spi.o(i.SPI_CalculateCRC), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_DataSizeConfig), (18 bytes).
+    Removing stm32f10x_spi.o(i.SPI_GetCRC), (16 bytes).
+    Removing stm32f10x_spi.o(i.SPI_GetCRCPolynomial), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ClearFlag), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ClearITPendingBit), (20 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_DMACmd), (18 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_GetITStatus), (52 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ITConfig), (32 bytes).
+    Removing stm32f10x_spi.o(i.SPI_I2S_ReceiveData), (6 bytes).
+    Removing stm32f10x_spi.o(i.SPI_NSSInternalSoftwareConfig), (30 bytes).
+    Removing stm32f10x_spi.o(i.SPI_SSOutputCmd), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_StructInit), (24 bytes).
+    Removing stm32f10x_spi.o(i.SPI_TransmitCRC), (10 bytes).
+
+105 unused section(s) (total 6900 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/dczerorl2.s                0x00000000   Number         0  __dczerorl2.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/daddsub.s                       0x00000000   Number         0  daddsub_clz.o ABSOLUTE
+    ../fplib/dfix.s                          0x00000000   Number         0  dfix.o ABSOLUTE
+    ../fplib/dflt.s                          0x00000000   Number         0  dflt_clz.o ABSOLUTE
+    ../fplib/dmul.s                          0x00000000   Number         0  dmul.o ABSOLUTE
+    ../fplib/dnaninf.s                       0x00000000   Number         0  dnaninf.o ABSOLUTE
+    ../fplib/dretinf.s                       0x00000000   Number         0  dretinf.o ABSOLUTE
+    ../fplib/faddsub.s                       0x00000000   Number         0  faddsub_clz.o ABSOLUTE
+    ../fplib/fcmpi.s                         0x00000000   Number         0  fcmpi.o ABSOLUTE
+    ../fplib/fflt.s                          0x00000000   Number         0  fflt_clz.o ABSOLUTE
+    ../fplib/fleqf.s                         0x00000000   Number         0  fleqf.o ABSOLUTE
+    ../fplib/fmul.s                          0x00000000   Number         0  fmul.o ABSOLUTE
+    ../fplib/fnaninf.s                       0x00000000   Number         0  fnaninf.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ../fplib/fretinf.s                       0x00000000   Number         0  fretinf.o ABSOLUTE
+    ../fplib/frleqf.s                        0x00000000   Number         0  frleqf.o ABSOLUTE
+    ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
+    C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\StdPeriph_Driver\src\stm32f10x_gpio.c 0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\StdPeriph_Driver\src\stm32f10x_rcc.c 0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\StdPeriph_Driver\src\stm32f10x_spi.c 0x00000000   Number         0  stm32f10x_spi.o ABSOLUTE
+    C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F1xx_DFP\\1.0.5\\Device\\StdPeriph_Driver\\src\\stm32f10x_gpio.c 0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F1xx_DFP\\1.0.5\\Device\\StdPeriph_Driver\\src\\stm32f10x_rcc.c 0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F1xx_DFP\\1.0.5\\Device\\StdPeriph_Driver\\src\\stm32f10x_spi.c 0x00000000   Number         0  stm32f10x_spi.o ABSOLUTE
+    P0P1Shell.c                              0x00000000   Number         0  p0p1shell.o ABSOLUTE
+    P0P1Shell.c                              0x00000000   Number         0  p0p1shell.o ABSOLUTE
+    RTE\Device\STM32F107VC\startup_stm32f10x_cl.s 0x00000000   Number         0  startup_stm32f10x_cl.o ABSOLUTE
+    RTE\Device\STM32F107VC\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RTE\\Device\\STM32F107VC\\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    TouchGrafik.c                            0x00000000   Number         0  touchgrafik.o ABSOLUTE
+    TouchGrafik.c                            0x00000000   Number         0  touchgrafik.o ABSOLUTE
+    TouchPrint.c                             0x00000000   Number         0  touchprint.o ABSOLUTE
+    TouchPrint.c                             0x00000000   Number         0  touchprint.o ABSOLUTE
+    blink.c                                  0x00000000   Number         0  blink.o ABSOLUTE
+    blink.c                                  0x00000000   Number         0  blink.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    RESET                                    0x08000000   Section      336  startup_stm32f10x_cl.o(RESET)
+    !!!main                                  0x08000150   Section        8  __main.o(!!!main)
+    !!!scatter                               0x08000158   Section       52  __scatter.o(!!!scatter)
+    !!dczerorl2                              0x0800018c   Section       90  __dczerorl2.o(!!dczerorl2)
+    !!handler_zi                             0x080001e8   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x08000204   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x08000206   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x08000206   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x08000208   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x0800020a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x0800020a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x0800020a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x0800020a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x0800020a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x0800020a   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x0800020a   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x0800020c   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x0800020c   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x0800020c   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x08000212   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x08000212   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x08000216   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x08000216   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x0800021e   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x08000220   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x08000220   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x08000224   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x0800022c   Section       64  startup_stm32f10x_cl.o(.text)
+    .text                                    0x0800026c   Section        0  heapauxi.o(.text)
+    .text                                    0x08000272   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x080002bc   Section        0  exit.o(.text)
+    .text                                    0x080002d0   Section        8  libspace.o(.text)
+    .text                                    0x080002d8   Section        0  sys_exit.o(.text)
+    .text                                    0x080002e4   Section        2  use_no_semi.o(.text)
+    .text                                    0x080002e6   Section        0  indicate_semi.o(.text)
+    i.ClearTouchP0                           0x080002e8   Section        0  p0p1shell.o(i.ClearTouchP0)
+    i.DrawPit                                0x08000308   Section        0  p0p1shell.o(i.DrawPit)
+    i.GLCD_SetCursor                         0x08000348   Section        0  touchgrafik.o(i.GLCD_SetCursor)
+    i.GLCD_Write_Command                     0x08000374   Section        0  touchgrafik.o(i.GLCD_Write_Command)
+    i.GLCD_Write_Data                        0x08000418   Section        0  touchgrafik.o(i.GLCD_Write_Data)
+    i.GLCD_Write_Data16                      0x080004bc   Section        0  touchgrafik.o(i.GLCD_Write_Data16)
+    i.GPIO_Init                              0x080004d0   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
+    i.GPIO_PinRemapConfig                    0x080005e8   Section        0  stm32f10x_gpio.o(i.GPIO_PinRemapConfig)
+    i.GPIO_ReadInputDataBit                  0x08000678   Section        0  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
+    i.GPIO_ResetBits                         0x0800068a   Section        0  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x0800068e   Section        0  stm32f10x_gpio.o(i.GPIO_SetBits)
+    i.GPIO_WriteBit                          0x08000692   Section        0  stm32f10x_gpio.o(i.GPIO_WriteBit)
+    i.Get_Status_Touch                       0x0800069c   Section        0  touchgrafik.o(i.Get_Status_Touch)
+    i.InitP0P1                               0x080006b8   Section        0  p0p1shell.o(i.InitP0P1)
+    i.InitTouchP0P1                          0x08000794   Section        0  p0p1shell.o(i.InitTouchP0P1)
+    i.InitTouchScreen                        0x080008b4   Section        0  touchgrafik.o(i.InitTouchScreen)
+    i.Initial_GLCD_Hardware                  0x08000920   Section        0  touchgrafik.o(i.Initial_GLCD_Hardware)
+    i.Initial_GLCD_Vertikal                  0x08000ad8   Section        0  touchgrafik.o(i.Initial_GLCD_Vertikal)
+    i.PitCatched                             0x08000dc0   Section        0  p0p1shell.o(i.PitCatched)
+    i.PrintHeadline                          0x08000e10   Section        0  p0p1shell.o(i.PrintHeadline)
+    i.RCC_APB1PeriphClockCmd                 0x08000ef4   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB1PeriphResetCmd                 0x08000f14   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
+    i.RCC_APB2PeriphClockCmd                 0x08000f34   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_APB2PeriphResetCmd                 0x08000f54   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd)
+    i.SPI_Cmd                                0x08000f74   Section        0  stm32f10x_spi.o(i.SPI_Cmd)
+    i.SPI_I2S_DeInit                         0x08000f8c   Section        0  stm32f10x_spi.o(i.SPI_I2S_DeInit)
+    i.SPI_I2S_GetFlagStatus                  0x08000fe4   Section        0  stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus)
+    i.SPI_I2S_SendData                       0x08000ff6   Section        0  stm32f10x_spi.o(i.SPI_I2S_SendData)
+    i.SPI_Init                               0x08000ffa   Section        0  stm32f10x_spi.o(i.SPI_Init)
+    i.SetSysClock                            0x08001036   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x08001037   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x08001040   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x08001041   Thumb Code   264  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SetTouchP0                             0x08001158   Section        0  p0p1shell.o(i.SetTouchP0)
+    i.ShowMSBLSB                             0x08001174   Section        0  p0p1shell.o(i.ShowMSBLSB)
+    i.ShowP0P1Pits                           0x08001240   Section        0  p0p1shell.o(i.ShowP0P1Pits)
+    i.SysTick_Handler                        0x08001388   Section        0  p0p1shell.o(i.SysTick_Handler)
+    i.SystemInit                             0x080013a4   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.TCS_Average_X_Y                        0x08001410   Section        0  touchgrafik.o(i.TCS_Average_X_Y)
+    i.TCS_SPI_ReadPos                        0x080014e0   Section        0  touchgrafik.o(i.TCS_SPI_ReadPos)
+    i.TCS_SPI_Write                          0x08001570   Section        0  touchgrafik.o(i.TCS_SPI_Write)
+    i.TSC_P0P1Refresh                        0x080015d4   Section        0  p0p1shell.o(i.TSC_P0P1Refresh)
+    i.TSC_TouchHandle                        0x080016e8   Section        0  p0p1shell.o(i.TSC_TouchHandle)
+    i.TouchP0P1Service                       0x08001bd4   Section        0  p0p1shell.o(i.TouchP0P1Service)
+    i.clearScreen                            0x08001c0c   Section        0  touchgrafik.o(i.clearScreen)
+    i.delay_ms                               0x08001c24   Section        0  p0p1shell.o(i.delay_ms)
+    i.getScreenDir                           0x08001c38   Section        0  touchgrafik.o(i.getScreenDir)
+    i.getTSCtouched                          0x08001c44   Section        0  touchgrafik.o(i.getTSCtouched)
+    i.getTSCx                                0x08001c60   Section        0  touchgrafik.o(i.getTSCx)
+    i.getTSCxy                               0x08001c6c   Section        0  touchgrafik.o(i.getTSCxy)
+    i.getTSCy                                0x08001d60   Section        0  touchgrafik.o(i.getTSCy)
+    i.lcd_icon_Ver                           0x08001d6c   Section        0  touchgrafik.o(i.lcd_icon_Ver)
+    i.lcd_printStr_Ver                       0x08001ecc   Section        0  touchgrafik.o(i.lcd_printStr_Ver)
+    i.line                                   0x08001f00   Section        0  touchgrafik.o(i.line)
+    i.main                                   0x0800202c   Section        0  blink.o(i.main)
+    i.plotDot                                0x08002060   Section        0  touchgrafik.o(i.plotDot)
+    i.plotFilledRect                         0x08002098   Section        0  touchgrafik.o(i.plotFilledRect)
+    i.print                                  0x080020f8   Section        0  touchprint.o(i.print)
+    i.printAt                                0x08002138   Section        0  touchprint.o(i.printAt)
+    i.rectan                                 0x08002160   Section        0  touchgrafik.o(i.rectan)
+    i.setScreenDir                           0x08002218   Section        0  touchgrafik.o(i.setScreenDir)
+    i.setTextcolor                           0x08002224   Section        0  touchprint.o(i.setTextcolor)
+    i.text_7x11                              0x08002230   Section        0  touchgrafik.o(i.text_7x11)
+    i.textxy                                 0x08002318   Section        0  touchgrafik.o(i.textxy)
+    .constdata                               0x0800234c   Section     1840  touchgrafik.o(.constdata)
+    .data                                    0x20000000   Section     1144  p0p1shell.o(.data)
+    oldTouchDown                             0x2000046c   Data           1  p0p1shell.o(.data)
+    oldP1                                    0x2000046d   Data           1  p0p1shell.o(.data)
+    newP1                                    0x2000046e   Data           1  p0p1shell.o(.data)
+    diffP1                                   0x2000046f   Data           1  p0p1shell.o(.data)
+    oldP0                                    0x20000470   Data           1  p0p1shell.o(.data)
+    newP0                                    0x20000471   Data           1  p0p1shell.o(.data)
+    diffP0                                   0x20000472   Data           1  p0p1shell.o(.data)
+    RefreshTime                              0x20000474   Data           4  p0p1shell.o(.data)
+    .data                                    0x20000478   Section       84  touchgrafik.o(.data)
+    .data                                    0x200004cc   Section       12  touchprint.o(.data)
+    .bss                                     0x200004d8   Section      824  touchgrafik.o(.bss)
+    .bss                                     0x20000810   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000870   Section      512  startup_stm32f10x_cl.o(HEAP)
+    Heap_Mem                                 0x20000870   Data         512  startup_stm32f10x_cl.o(HEAP)
+    STACK                                    0x20000a70   Section     1024  startup_stm32f10x_cl.o(STACK)
+    Stack_Mem                                0x20000a70   Data        1024  startup_stm32f10x_cl.o(STACK)
+    __initial_sp                             0x20000e70   Data           0  startup_stm32f10x_cl.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  blink.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x00000150   Number         0  startup_stm32f10x_cl.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_cl.o(RESET)
+    __Vectors_End                            0x08000150   Data           0  startup_stm32f10x_cl.o(RESET)
+    __main                                   0x08000151   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x08000159   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x08000159   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x08000159   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x08000167   Thumb Code     0  __scatter.o(!!!scatter)
+    __decompress                             0x0800018d   Thumb Code    90  __dczerorl2.o(!!dczerorl2)
+    __decompress1                            0x0800018d   Thumb Code     0  __dczerorl2.o(!!dczerorl2)
+    __scatterload_zeroinit                   0x080001e9   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x08000205   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x08000207   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x08000209   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x0800020b   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x0800020d   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x0800020d   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x0800020d   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x08000213   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x08000213   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x08000217   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x08000217   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x0800021f   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x08000221   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x08000221   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x08000225   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x0800022d   Thumb Code     8  startup_stm32f10x_cl.o(.text)
+    NMI_Handler                              0x08000235   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    HardFault_Handler                        0x08000237   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    MemManage_Handler                        0x08000239   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    BusFault_Handler                         0x0800023b   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    UsageFault_Handler                       0x0800023d   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    SVC_Handler                              0x0800023f   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    DebugMon_Handler                         0x08000241   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    PendSV_Handler                           0x08000243   Thumb Code     2  startup_stm32f10x_cl.o(.text)
+    ADC1_2_IRQHandler                        0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_RX0_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN1_TX_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_RX0_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_RX1_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_SCE_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    CAN2_TX_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel1_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel2_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel3_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel4_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    DMA2_Channel5_IRQHandler                 0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    ETH_IRQHandler                           0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    ETH_WKUP_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI0_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI15_10_IRQHandler                     0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI1_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI2_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI3_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI4_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    EXTI9_5_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    FLASH_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C1_ER_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C1_EV_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C2_ER_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    I2C2_EV_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    OTG_FS_IRQHandler                        0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    OTG_FS_WKUP_IRQHandler                   0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    PVD_IRQHandler                           0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    RCC_IRQHandler                           0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    RTCAlarm_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    RTC_IRQHandler                           0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    SPI1_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    SPI2_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    SPI3_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TAMPER_IRQHandler                        0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_CC_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM1_UP_IRQHandler                       0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM2_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM3_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM4_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM5_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM6_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    TIM7_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    UART4_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    UART5_IRQHandler                         0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    USART1_IRQHandler                        0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    USART2_IRQHandler                        0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    USART3_IRQHandler                        0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    WWDG_IRQHandler                          0x08000247   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    __user_initial_stackheap                 0x08000249   Thumb Code     0  startup_stm32f10x_cl.o(.text)
+    __use_two_region_memory                  0x0800026d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800026f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000271   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x08000273   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x080002bd   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x080002d1   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x080002d1   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x080002d1   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x080002d9   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x080002e5   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x080002e5   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x080002e7   Thumb Code     0  indicate_semi.o(.text)
+    ClearTouchP0                             0x080002e9   Thumb Code    22  p0p1shell.o(i.ClearTouchP0)
+    DrawPit                                  0x08000309   Thumb Code    64  p0p1shell.o(i.DrawPit)
+    GLCD_SetCursor                           0x08000349   Thumb Code    44  touchgrafik.o(i.GLCD_SetCursor)
+    GLCD_Write_Command                       0x08000375   Thumb Code   142  touchgrafik.o(i.GLCD_Write_Command)
+    GLCD_Write_Data                          0x08000419   Thumb Code   142  touchgrafik.o(i.GLCD_Write_Data)
+    GLCD_Write_Data16                        0x080004bd   Thumb Code    20  touchgrafik.o(i.GLCD_Write_Data16)
+    GPIO_Init                                0x080004d1   Thumb Code   278  stm32f10x_gpio.o(i.GPIO_Init)
+    GPIO_PinRemapConfig                      0x080005e9   Thumb Code   138  stm32f10x_gpio.o(i.GPIO_PinRemapConfig)
+    GPIO_ReadInputDataBit                    0x08000679   Thumb Code    18  stm32f10x_gpio.o(i.GPIO_ReadInputDataBit)
+    GPIO_ResetBits                           0x0800068b   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x0800068f   Thumb Code     4  stm32f10x_gpio.o(i.GPIO_SetBits)
+    GPIO_WriteBit                            0x08000693   Thumb Code    10  stm32f10x_gpio.o(i.GPIO_WriteBit)
+    Get_Status_Touch                         0x0800069d   Thumb Code    22  touchgrafik.o(i.Get_Status_Touch)
+    InitP0P1                                 0x080006b9   Thumb Code   188  p0p1shell.o(i.InitP0P1)
+    InitTouchP0P1                            0x08000795   Thumb Code   248  p0p1shell.o(i.InitTouchP0P1)
+    InitTouchScreen                          0x080008b5   Thumb Code    58  touchgrafik.o(i.InitTouchScreen)
+    Initial_GLCD_Hardware                    0x08000921   Thumb Code   418  touchgrafik.o(i.Initial_GLCD_Hardware)
+    Initial_GLCD_Vertikal                    0x08000ad9   Thumb Code   722  touchgrafik.o(i.Initial_GLCD_Vertikal)
+    PitCatched                               0x08000dc1   Thumb Code    72  p0p1shell.o(i.PitCatched)
+    PrintHeadline                            0x08000e11   Thumb Code   164  p0p1shell.o(i.PrintHeadline)
+    RCC_APB1PeriphClockCmd                   0x08000ef5   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB1PeriphResetCmd                   0x08000f15   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd)
+    RCC_APB2PeriphClockCmd                   0x08000f35   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_APB2PeriphResetCmd                   0x08000f55   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd)
+    SPI_Cmd                                  0x08000f75   Thumb Code    24  stm32f10x_spi.o(i.SPI_Cmd)
+    SPI_I2S_DeInit                           0x08000f8d   Thumb Code    76  stm32f10x_spi.o(i.SPI_I2S_DeInit)
+    SPI_I2S_GetFlagStatus                    0x08000fe5   Thumb Code    18  stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus)
+    SPI_I2S_SendData                         0x08000ff7   Thumb Code     4  stm32f10x_spi.o(i.SPI_I2S_SendData)
+    SPI_Init                                 0x08000ffb   Thumb Code    60  stm32f10x_spi.o(i.SPI_Init)
+    SetTouchP0                               0x08001159   Thumb Code    20  p0p1shell.o(i.SetTouchP0)
+    ShowMSBLSB                               0x08001175   Thumb Code   180  p0p1shell.o(i.ShowMSBLSB)
+    ShowP0P1Pits                             0x08001241   Thumb Code   306  p0p1shell.o(i.ShowP0P1Pits)
+    SysTick_Handler                          0x08001389   Thumb Code    24  p0p1shell.o(i.SysTick_Handler)
+    SystemInit                               0x080013a5   Thumb Code    92  system_stm32f10x.o(i.SystemInit)
+    TCS_Average_X_Y                          0x08001411   Thumb Code   192  touchgrafik.o(i.TCS_Average_X_Y)
+    TCS_SPI_ReadPos                          0x080014e1   Thumb Code   132  touchgrafik.o(i.TCS_SPI_ReadPos)
+    TCS_SPI_Write                            0x08001571   Thumb Code    96  touchgrafik.o(i.TCS_SPI_Write)
+    TSC_P0P1Refresh                          0x080015d5   Thumb Code   230  p0p1shell.o(i.TSC_P0P1Refresh)
+    TSC_TouchHandle                          0x080016e9   Thumb Code  1248  p0p1shell.o(i.TSC_TouchHandle)
+    TouchP0P1Service                         0x08001bd5   Thumb Code    50  p0p1shell.o(i.TouchP0P1Service)
+    clearScreen                              0x08001c0d   Thumb Code    22  touchgrafik.o(i.clearScreen)
+    delay_ms                                 0x08001c25   Thumb Code    16  p0p1shell.o(i.delay_ms)
+    getScreenDir                             0x08001c39   Thumb Code     6  touchgrafik.o(i.getScreenDir)
+    getTSCtouched                            0x08001c45   Thumb Code    22  touchgrafik.o(i.getTSCtouched)
+    getTSCx                                  0x08001c61   Thumb Code     6  touchgrafik.o(i.getTSCx)
+    getTSCxy                                 0x08001c6d   Thumb Code   178  touchgrafik.o(i.getTSCxy)
+    getTSCy                                  0x08001d61   Thumb Code     6  touchgrafik.o(i.getTSCy)
+    lcd_icon_Ver                             0x08001d6d   Thumb Code   346  touchgrafik.o(i.lcd_icon_Ver)
+    lcd_printStr_Ver                         0x08001ecd   Thumb Code    52  touchgrafik.o(i.lcd_printStr_Ver)
+    line                                     0x08001f01   Thumb Code   300  touchgrafik.o(i.line)
+    main                                     0x0800202d   Thumb Code    40  blink.o(i.main)
+    plotDot                                  0x08002061   Thumb Code    52  touchgrafik.o(i.plotDot)
+    plotFilledRect                           0x08002099   Thumb Code    94  touchgrafik.o(i.plotFilledRect)
+    print                                    0x080020f9   Thumb Code    52  touchprint.o(i.print)
+    printAt                                  0x08002139   Thumb Code    30  touchprint.o(i.printAt)
+    rectan                                   0x08002161   Thumb Code   182  touchgrafik.o(i.rectan)
+    setScreenDir                             0x08002219   Thumb Code     6  touchgrafik.o(i.setScreenDir)
+    setTextcolor                             0x08002225   Thumb Code     6  touchprint.o(i.setTextcolor)
+    text_7x11                                0x08002231   Thumb Code   226  touchgrafik.o(i.text_7x11)
+    textxy                                   0x08002319   Thumb Code    52  touchgrafik.o(i.textxy)
+    ascii_7x11                               0x0800234c   Data        1330  touchgrafik.o(.constdata)
+    TouchIcon                                0x0800287e   Data         510  touchgrafik.o(.constdata)
+    Region$$Table$$Base                      0x08002a7c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002a9c   Number         0  anon$$obj.o(Region$$Table)
+    TSCx                                     0x20000000   Data           4  p0p1shell.o(.data)
+    TSCy                                     0x20000004   Data           4  p0p1shell.o(.data)
+    rotatedPITS                              0x20000008   Data           1  p0p1shell.o(.data)
+    P0P1xch                                  0x20000009   Data           1  p0p1shell.o(.data)
+    MSBLSBxch                                0x2000000a   Data           1  p0p1shell.o(.data)
+    TouchAllP0                               0x2000000b   Data           1  p0p1shell.o(.data)
+    TouchP0                                  0x2000000c   Data           8  p0p1shell.o(.data)
+    TimingDelay                              0x20000014   Data           4  p0p1shell.o(.data)
+    P0P1PortMode                             0x20000018   Data           1  p0p1shell.o(.data)
+    Headline0                                0x20000019   Data          11  p0p1shell.o(.data)
+    Headline1                                0x20000024   Data          18  p0p1shell.o(.data)
+    Headline2                                0x20000036   Data          17  p0p1shell.o(.data)
+    Headline                                 0x20000048   Data           4  p0p1shell.o(.data)
+    VertPos                                  0x2000004c   Data          32  p0p1shell.o(.data)
+    RefreshPit                               0x2000006c   Data          32  p0p1shell.o(.data)
+    ClearLeftPit                             0x2000008c   Data          32  p0p1shell.o(.data)
+    ClearAllPit                              0x200000ac   Data          32  p0p1shell.o(.data)
+    TypePit                                  0x200000cc   Data          32  p0p1shell.o(.data)
+    RotatePit                                0x200000ec   Data          32  p0p1shell.o(.data)
+    ExchP0P1Pit                              0x2000010c   Data          32  p0p1shell.o(.data)
+    ExchP1P0Pit                              0x2000012c   Data          32  p0p1shell.o(.data)
+    MSBLSBPit                                0x2000014c   Data          32  p0p1shell.o(.data)
+    P0Icon                                   0x2000016c   Data         256  p0p1shell.o(.data)
+    P0SW                                     0x2000026c   Data         256  p0p1shell.o(.data)
+    P1LED                                    0x2000036c   Data         256  p0p1shell.o(.data)
+    dif_adc_X                                0x20000478   Data           4  touchgrafik.o(.data)
+    dif_adc_Y                                0x2000047c   Data           4  touchgrafik.o(.data)
+    ave_adc_X                                0x20000480   Data           4  touchgrafik.o(.data)
+    ave_adc_Y                                0x20000484   Data           4  touchgrafik.o(.data)
+    dis_XD_Ver                               0x20000488   Data          12  touchgrafik.o(.data)
+    dis_YD_Ver                               0x20000494   Data          12  touchgrafik.o(.data)
+    divider                                  0x200004a0   Data           4  touchgrafik.o(.data)
+    An                                       0x200004a4   Data           4  touchgrafik.o(.data)
+    Bn                                       0x200004a8   Data           4  touchgrafik.o(.data)
+    Cn                                       0x200004ac   Data           4  touchgrafik.o(.data)
+    Dn                                       0x200004b0   Data           4  touchgrafik.o(.data)
+    En                                       0x200004b4   Data           4  touchgrafik.o(.data)
+    Fn                                       0x200004b8   Data           4  touchgrafik.o(.data)
+    TSC_X                                    0x200004bc   Data           4  touchgrafik.o(.data)
+    TSC_Y                                    0x200004c0   Data           4  touchgrafik.o(.data)
+    t                                        0x200004c4   Data           4  touchgrafik.o(.data)
+    ScreenDir                                0x200004c8   Data           1  touchgrafik.o(.data)
+    num1                                     0x200004c9   Data           1  touchgrafik.o(.data)
+    num2                                     0x200004ca   Data           1  touchgrafik.o(.data)
+    num3                                     0x200004cb   Data           1  touchgrafik.o(.data)
+    txtX                                     0x200004cc   Data           4  touchprint.o(.data)
+    txtY                                     0x200004d0   Data           4  touchprint.o(.data)
+    txtCol                                   0x200004d4   Data           4  touchprint.o(.data)
+    buf_adc_X                                0x200004d8   Data         400  touchgrafik.o(.bss)
+    buf_adc_Y                                0x20000668   Data         400  touchgrafik.o(.bss)
+    tcs_ave_X                                0x200007f8   Data          12  touchgrafik.o(.bss)
+    tcs_ave_Y                                0x20000804   Data          12  touchgrafik.o(.bss)
+    __libspace_start                         0x20000810   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000870   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0800022d
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00002f74, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00002bec])
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002a9c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000150   Data   RO           60    RESET               startup_stm32f10x_cl.o
+    0x08000150   0x08000150   0x00000008   Code   RO          431  * !!!main             c_w.l(__main.o)
+    0x08000158   0x08000158   0x00000034   Code   RO          637    !!!scatter          c_w.l(__scatter.o)
+    0x0800018c   0x0800018c   0x0000005a   Code   RO          635    !!dczerorl2         c_w.l(__dczerorl2.o)
+    0x080001e6   0x080001e6   0x00000002   PAD
+    0x080001e8   0x080001e8   0x0000001c   Code   RO          639    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000204   0x08000204   0x00000002   Code   RO          505    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          512    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          514    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          517    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          519    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          521    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          524    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          526    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          528    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          530    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          532    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          534    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          536    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          538    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          540    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          542    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          544    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          548    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          550    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          552    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000000   Code   RO          554    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000206   0x08000206   0x00000002   Code   RO          555    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x08000208   0x08000208   0x00000002   Code   RO          575    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800020a   0x0800020a   0x00000000   Code   RO          588    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800020a   0x0800020a   0x00000000   Code   RO          590    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800020a   0x0800020a   0x00000000   Code   RO          593    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x0800020a   0x0800020a   0x00000000   Code   RO          596    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x0800020a   0x0800020a   0x00000000   Code   RO          598    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800020a   0x0800020a   0x00000000   Code   RO          601    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0800020a   0x0800020a   0x00000002   Code   RO          602    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x0800020c   0x0800020c   0x00000000   Code   RO          469    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x0800020c   0x0800020c   0x00000000   Code   RO          482    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x0800020c   0x0800020c   0x00000006   Code   RO          494    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000212   0x08000212   0x00000000   Code   RO          484    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000212   0x08000212   0x00000004   Code   RO          485    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000216   0x08000216   0x00000000   Code   RO          487    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000216   0x08000216   0x00000008   Code   RO          488    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800021e   0x0800021e   0x00000002   Code   RO          509    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000220   0x08000220   0x00000000   Code   RO          557    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000220   0x08000220   0x00000004   Code   RO          558    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000224   0x08000224   0x00000006   Code   RO          559    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x0800022a   0x0800022a   0x00000002   PAD
+    0x0800022c   0x0800022c   0x00000040   Code   RO           61  * .text               startup_stm32f10x_cl.o
+    0x0800026c   0x0800026c   0x00000006   Code   RO          429    .text               c_w.l(heapauxi.o)
+    0x08000272   0x08000272   0x0000004a   Code   RO          496    .text               c_w.l(sys_stackheap_outer.o)
+    0x080002bc   0x080002bc   0x00000012   Code   RO          498    .text               c_w.l(exit.o)
+    0x080002ce   0x080002ce   0x00000002   PAD
+    0x080002d0   0x080002d0   0x00000008   Code   RO          506    .text               c_w.l(libspace.o)
+    0x080002d8   0x080002d8   0x0000000c   Code   RO          567    .text               c_w.l(sys_exit.o)
+    0x080002e4   0x080002e4   0x00000002   Code   RO          578    .text               c_w.l(use_no_semi.o)
+    0x080002e6   0x080002e6   0x00000000   Code   RO          580    .text               c_w.l(indicate_semi.o)
+    0x080002e6   0x080002e6   0x00000002   PAD
+    0x080002e8   0x080002e8   0x00000020   Code   RO          113    i.ClearTouchP0      TouchP0P1.lib(p0p1shell.o)
+    0x08000308   0x08000308   0x00000040   Code   RO          114    i.DrawPit           TouchP0P1.lib(p0p1shell.o)
+    0x08000348   0x08000348   0x0000002c   Code   RO          146    i.GLCD_SetCursor    TouchP0P1.lib(touchgrafik.o)
+    0x08000374   0x08000374   0x000000a4   Code   RO          149    i.GLCD_Write_Command  TouchP0P1.lib(touchgrafik.o)
+    0x08000418   0x08000418   0x000000a4   Code   RO          150    i.GLCD_Write_Data   TouchP0P1.lib(touchgrafik.o)
+    0x080004bc   0x080004bc   0x00000014   Code   RO          151    i.GLCD_Write_Data16  TouchP0P1.lib(touchgrafik.o)
+    0x080004d0   0x080004d0   0x00000116   Code   RO          256    i.GPIO_Init         TouchP0P1.lib(stm32f10x_gpio.o)
+    0x080005e6   0x080005e6   0x00000002   PAD
+    0x080005e8   0x080005e8   0x00000090   Code   RO          258    i.GPIO_PinRemapConfig  TouchP0P1.lib(stm32f10x_gpio.o)
+    0x08000678   0x08000678   0x00000012   Code   RO          260    i.GPIO_ReadInputDataBit  TouchP0P1.lib(stm32f10x_gpio.o)
+    0x0800068a   0x0800068a   0x00000004   Code   RO          263    i.GPIO_ResetBits    TouchP0P1.lib(stm32f10x_gpio.o)
+    0x0800068e   0x0800068e   0x00000004   Code   RO          264    i.GPIO_SetBits      TouchP0P1.lib(stm32f10x_gpio.o)
+    0x08000692   0x08000692   0x0000000a   Code   RO          267    i.GPIO_WriteBit     TouchP0P1.lib(stm32f10x_gpio.o)
+    0x0800069c   0x0800069c   0x0000001c   Code   RO          152    i.Get_Status_Touch  TouchP0P1.lib(touchgrafik.o)
+    0x080006b8   0x080006b8   0x000000dc   Code   RO          115    i.InitP0P1          TouchP0P1.lib(p0p1shell.o)
+    0x08000794   0x08000794   0x00000120   Code   RO          116    i.InitTouchP0P1     TouchP0P1.lib(p0p1shell.o)
+    0x080008b4   0x080008b4   0x0000006c   Code   RO          153    i.InitTouchScreen   TouchP0P1.lib(touchgrafik.o)
+    0x08000920   0x08000920   0x000001b8   Code   RO          154    i.Initial_GLCD_Hardware  TouchP0P1.lib(touchgrafik.o)
+    0x08000ad8   0x08000ad8   0x000002e8   Code   RO          155    i.Initial_GLCD_Vertikal  TouchP0P1.lib(touchgrafik.o)
+    0x08000dc0   0x08000dc0   0x00000050   Code   RO          117    i.PitCatched        TouchP0P1.lib(p0p1shell.o)
+    0x08000e10   0x08000e10   0x000000e4   Code   RO          118    i.PrintHeadline     TouchP0P1.lib(p0p1shell.o)
+    0x08000ef4   0x08000ef4   0x00000020   Code   RO          293    i.RCC_APB1PeriphClockCmd  TouchP0P1.lib(stm32f10x_rcc.o)
+    0x08000f14   0x08000f14   0x00000020   Code   RO          294    i.RCC_APB1PeriphResetCmd  TouchP0P1.lib(stm32f10x_rcc.o)
+    0x08000f34   0x08000f34   0x00000020   Code   RO          295    i.RCC_APB2PeriphClockCmd  TouchP0P1.lib(stm32f10x_rcc.o)
+    0x08000f54   0x08000f54   0x00000020   Code   RO          296    i.RCC_APB2PeriphResetCmd  TouchP0P1.lib(stm32f10x_rcc.o)
+    0x08000f74   0x08000f74   0x00000018   Code   RO          382    i.SPI_Cmd           TouchP0P1.lib(stm32f10x_spi.o)
+    0x08000f8c   0x08000f8c   0x00000058   Code   RO          389    i.SPI_I2S_DeInit    TouchP0P1.lib(stm32f10x_spi.o)
+    0x08000fe4   0x08000fe4   0x00000012   Code   RO          390    i.SPI_I2S_GetFlagStatus  TouchP0P1.lib(stm32f10x_spi.o)
+    0x08000ff6   0x08000ff6   0x00000004   Code   RO          394    i.SPI_I2S_SendData  TouchP0P1.lib(stm32f10x_spi.o)
+    0x08000ffa   0x08000ffa   0x0000003c   Code   RO          395    i.SPI_Init          TouchP0P1.lib(stm32f10x_spi.o)
+    0x08001036   0x08001036   0x00000008   Code   RO           68    i.SetSysClock       system_stm32f10x.o
+    0x0800103e   0x0800103e   0x00000002   PAD
+    0x08001040   0x08001040   0x00000118   Code   RO           69    i.SetSysClockTo72   system_stm32f10x.o
+    0x08001158   0x08001158   0x0000001c   Code   RO          119    i.SetTouchP0        TouchP0P1.lib(p0p1shell.o)
+    0x08001174   0x08001174   0x000000cc   Code   RO          120    i.ShowMSBLSB        TouchP0P1.lib(p0p1shell.o)
+    0x08001240   0x08001240   0x00000148   Code   RO          121    i.ShowP0P1Pits      TouchP0P1.lib(p0p1shell.o)
+    0x08001388   0x08001388   0x0000001c   Code   RO          122    i.SysTick_Handler   TouchP0P1.lib(p0p1shell.o)
+    0x080013a4   0x080013a4   0x0000006c   Code   RO           71    i.SystemInit        system_stm32f10x.o
+    0x08001410   0x08001410   0x000000d0   Code   RO          156    i.TCS_Average_X_Y   TouchP0P1.lib(touchgrafik.o)
+    0x080014e0   0x080014e0   0x00000090   Code   RO          157    i.TCS_SPI_ReadPos   TouchP0P1.lib(touchgrafik.o)
+    0x08001570   0x08001570   0x00000064   Code   RO          158    i.TCS_SPI_Write     TouchP0P1.lib(touchgrafik.o)
+    0x080015d4   0x080015d4   0x00000114   Code   RO          123    i.TSC_P0P1Refresh   TouchP0P1.lib(p0p1shell.o)
+    0x080016e8   0x080016e8   0x000004ec   Code   RO          124    i.TSC_TouchHandle   TouchP0P1.lib(p0p1shell.o)
+    0x08001bd4   0x08001bd4   0x00000038   Code   RO          125    i.TouchP0P1Service  TouchP0P1.lib(p0p1shell.o)
+    0x08001c0c   0x08001c0c   0x00000016   Code   RO          163    i.clearScreen       TouchP0P1.lib(touchgrafik.o)
+    0x08001c22   0x08001c22   0x00000002   PAD
+    0x08001c24   0x08001c24   0x00000014   Code   RO          126    i.delay_ms          TouchP0P1.lib(p0p1shell.o)
+    0x08001c38   0x08001c38   0x0000000c   Code   RO          166    i.getScreenDir      TouchP0P1.lib(touchgrafik.o)
+    0x08001c44   0x08001c44   0x0000001c   Code   RO          167    i.getTSCtouched     TouchP0P1.lib(touchgrafik.o)
+    0x08001c60   0x08001c60   0x0000000c   Code   RO          168    i.getTSCx           TouchP0P1.lib(touchgrafik.o)
+    0x08001c6c   0x08001c6c   0x000000f4   Code   RO          169    i.getTSCxy          TouchP0P1.lib(touchgrafik.o)
+    0x08001d60   0x08001d60   0x0000000c   Code   RO          170    i.getTSCy           TouchP0P1.lib(touchgrafik.o)
+    0x08001d6c   0x08001d6c   0x00000160   Code   RO          171    i.lcd_icon_Ver      TouchP0P1.lib(touchgrafik.o)
+    0x08001ecc   0x08001ecc   0x00000034   Code   RO          173    i.lcd_printStr_Ver  TouchP0P1.lib(touchgrafik.o)
+    0x08001f00   0x08001f00   0x0000012c   Code   RO          174    i.line              TouchP0P1.lib(touchgrafik.o)
+    0x0800202c   0x0800202c   0x00000034   Code   RO            4    i.main              blink.o
+    0x08002060   0x08002060   0x00000038   Code   RO          175    i.plotDot           TouchP0P1.lib(touchgrafik.o)
+    0x08002098   0x08002098   0x0000005e   Code   RO          176    i.plotFilledRect    TouchP0P1.lib(touchgrafik.o)
+    0x080020f6   0x080020f6   0x00000002   PAD
+    0x080020f8   0x080020f8   0x00000040   Code   RO          231    i.print             TouchP0P1.lib(touchprint.o)
+    0x08002138   0x08002138   0x00000028   Code   RO          232    i.printAt           TouchP0P1.lib(touchprint.o)
+    0x08002160   0x08002160   0x000000b6   Code   RO          181    i.rectan            TouchP0P1.lib(touchgrafik.o)
+    0x08002216   0x08002216   0x00000002   PAD
+    0x08002218   0x08002218   0x0000000c   Code   RO          182    i.setScreenDir      TouchP0P1.lib(touchgrafik.o)
+    0x08002224   0x08002224   0x0000000c   Code   RO          237    i.setTextcolor      TouchP0P1.lib(touchprint.o)
+    0x08002230   0x08002230   0x000000e8   Code   RO          183    i.text_7x11         TouchP0P1.lib(touchgrafik.o)
+    0x08002318   0x08002318   0x00000034   Code   RO          184    i.textxy            TouchP0P1.lib(touchgrafik.o)
+    0x0800234c   0x0800234c   0x00000730   Data   RO          186    .constdata          TouchP0P1.lib(touchgrafik.o)
+    0x08002a7c   0x08002a7c   0x00000020   Data   RO          633    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08002a9c, Size: 0x000004d8, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00000150])
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   COMPRESSED   0x00000478   Data   RW          127    .data               TouchP0P1.lib(p0p1shell.o)
+    0x20000478   COMPRESSED   0x00000054   Data   RW          187    .data               TouchP0P1.lib(touchgrafik.o)
+    0x200004cc   COMPRESSED   0x0000000c   Data   RW          238    .data               TouchP0P1.lib(touchprint.o)
+
+
+    Execution Region ER_ZI (Exec base: 0x200004d8, Load base: 0x08002bec, Size: 0x00000998, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200004d8        -       0x00000338   Zero   RW          185    .bss                TouchP0P1.lib(touchgrafik.o)
+    0x20000810        -       0x00000060   Zero   RW          507    .bss                c_w.l(libspace.o)
+    0x20000870        -       0x00000200   Zero   RW           59    HEAP                startup_stm32f10x_cl.o
+    0x20000a70        -       0x00000400   Zero   RW           58    STACK               startup_stm32f10x_cl.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        52         12          0          0          0       4943   blink.o
+        64         26        336          0       1536        800   startup_stm32f10x_cl.o
+       396         32          0          0          0       2081   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+       514         70        368          0       1536       7824   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+      3112        356          0       1144          0       1104   p0p1shell.o
+       458          6          0          0          0        440   stm32f10x_gpio.o
+       128         24          0          0          0        272   stm32f10x_rcc.o
+       194         12          0          0          0        356   stm32f10x_spi.o
+      3826        288       1840         84        824       2104   touchgrafik.o
+       116         28          0         12          0        228   touchprint.o
+        90          0          0          0          0          0   __dczerorl2.o
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        52          8          0          0          0          0   __scatter.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+      8186        730       1840       1240        920       5088   Library Totals
+        16          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      7834        714       1840       1240        824       4504   TouchP0P1.lib
+       336         16          0          0         96        584   c_w.l
+
+    ----------------------------------------------------------------------
+      8186        730       1840       1240        920       5088   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      8700        800       2208       1240       2456       9736   Grand Totals
+      8700        800       2208        336       2456       9736   ELF Image Totals (compressed)
+      8700        800       2208        336          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                10908 (  10.65kB)
+    Total RW  Size (RW Data + ZI Data)              3696 (   3.61kB)
+    Total ROM Size (Code + RO Data + RW Data)      11244 (  10.98kB)
+
+==============================================================================
+
