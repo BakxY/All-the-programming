@@ -16,9 +16,12 @@
 /*----------User functions----------*/
 
 /*----------User code---------------*/
-int main(void)
+int main(void) 														//main function
 {
-  while (1)
+	
+	InitTouchP0P1("1");											//Display initialisation
+	
+  while (1)																//Loop forever
   {
     //write 10/10 code here
   }
