@@ -1,1 +1,1 @@
-Here are the tutorials for setting up your PC to program the b4 microcontroller board
+Here are the tutorials for setting up your PC to program and use the b4 microcontroller board
