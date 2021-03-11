@@ -8,5 +8,5 @@
 #define MASK_S6 0x40
 #define MASK_S7 0x80
 
-/*-----Mask for PORT read---------------*/
+/*-----Mask for PORT read-----*/
 #define MASK 0x01
