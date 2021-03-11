@@ -10,14 +10,14 @@
 #include <stm32f10x.h>								//include header file for uC
 #include "TouchP0P1.h"								//include header file for display
 /*----------Defines-----------------*/
-//found in GIT defines
+//found in GIT defines.c
 #define true 1
 #define false 0
 /*----------Variables---------------*/
 //local variables are prefered
 
 /*----------User functions----------*/
-//found in GIT user functions folder
+//found in GIT user_functions.c
 
 /*----------User code---------------*/
 int main(void) 										//main function
