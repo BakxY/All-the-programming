@@ -5,4 +5,4 @@ Wed. 10.03.2021:
 
 Thu. 11.03.2021:
   1. panel about our uC board and how to read the datasheets
-  2. Programming on exampels for basic coding
+  2. Programming on exampels for basic coding (Aufgaben EINSTIEG.doc)
