@@ -13,27 +13,23 @@
 #define TRUE 1										//define a constant for 1
 #define FALSE 0										//define a constant for 0
 
-#define MASK_S0 0x01								//define masks for bit masking
-#define MASK_S1 0x02
-#define MASK_S2 0x04
-#define MASK_S3 0x08
-#define MASK_S4 0x10
-#define MASK_S5 0x20
-#define MASK_S6 0x40
-#define MASK_S7 0x80
+#define MASK 0x01								//define mask for bit masking
 /*----------Variables---------------*/
 //local variables are prefered
 /*----------User functions----------*/
-int ReadPin(int iMASK)								//function for reading pin input
-{
-	int iStatus;
-	iStatus = (1 >> (P0 & iMASK)) == (1 >> iMASK);	//get status of selested button
-	return(iStatus);
+int ReadPort(void)									//function for reading port input
+{	
+	int iPinArray[8];
+	for (int i = 0; i < 8; i++)						//for loop for scaning the seperate pins
+	{
+		iPinArray[i] = P0 & 0x01 << i && 1;			//saving of seperate pins in array
+	}
+	return iPinArray;
 }
 /*----------User code---------------*/
 int main(void) 										//main function
 {
-	
+	int* iPinArray;									//variable for receiving Port status
 	InitTouchP0P1("1r");								//Display initialisation r -> rotated display
 	
 	while (1)
