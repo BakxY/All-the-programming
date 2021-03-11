@@ -5,12 +5,13 @@
 * Dep:      b4 microcontrollers     *
 * uC:       STM32F107VC             *
 ------------------------------------*/
+
 /*----------Libraries---------------*/
 #include <stm32f10x.h>
 #include "TouchP0P1.h"
 /*----------Defines-----------------*/
-#define TRUE 1
-#define FALSE 0
+#define true 1
+#define false 0
 /*----------Variables---------------*/
 
 /*----------User functions----------*/
