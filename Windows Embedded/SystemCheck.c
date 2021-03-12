@@ -1,13 +1,17 @@
 void SystemCheck(void)
 {
+	/*----------VERSION TEXT----------*/
+	textxy("FischerTG_SystemCheck_V2", 0, 315, WHITE, BLACK);
+	/*-----------VARIABLES------------*/
 	int iCount;
 	int iMCount = 1;
-	
+	/*----------TITLE TEXT------------*/
 	printAt(0, "System check started");
 	printAt(1, "--------------------");
 	
 	while(iCount < 10)
 	{
+	/*----------SPINNI BOY-----------*/
 		printAt(3, "/");
 		delayWorky(0x100000);
 		printAt(3, "-");
@@ -16,7 +20,7 @@ void SystemCheck(void)
 		delayWorky(0x100000);
 		printAt(3, "|");
 		delayWorky(0x100000);
-		
+	/*------------LOADING------------*/
 		iMCount = iCount;
 		while(iMCount > 0)
 		{
@@ -24,6 +28,7 @@ void SystemCheck(void)
 			iMCount--;
 		}
 		iCount++;
+	/*-----------CHECK TEST----------*/
 		switch(iCount)
 		{
 			case 2:
@@ -56,7 +61,6 @@ void SystemCheck(void)
 				clearScreen(BLACK);
 				break;
 			default:
-				textxy("SystemCheck.c (V1)", 0, 315, WHITE, BLACK);
 				break;
 		}
 	}
