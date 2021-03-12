@@ -1,6 +1,9 @@
+unsigned int x = 8; //These need to be global variables
+unsigned int y = 1;
+
 void Bash(void)
 {
-  textxy("BakxY_Bash_V1", 0, 315, WHITE, BLACK);
+  textxy("BakxY_Bash_V2", 0, 315, WHITE, BLACK);
   
   int iInput;
   int iStatus[8];
