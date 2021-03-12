@@ -21,6 +21,28 @@ int* ReadPort(void)									//function for reading port input
 	}
 	return iPinArray;								//return the port in array !!! needs to be safed in int pointer -> int* iPinArray; -> iPinArray = ReadPort(); !!!
 }
+/*-----Function for setting full PORT from array-----*/
+void OutputPort(int iStatePort[])
+{
+  int iMaskP[] = {0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01};  //array for masks which are used to set the port to 1
+  int iMaskN[] = {0x7F, 0xBF, 0xDF, 0xEF, 0xF7, 0xFB, 0xFD, 0xFE};  //array for masks which are used to set the port to 0
+  int i;                              //placeholder variable for the for loops
+  
+  for(i = 0; i <= 8; i++)             //for loop which is used to cycle the masks 
+  {
+    if(iStatePort[i] == 1)            //compare wanted state of pin with 1
+    {
+      P1 |= iMaskP[i];                //set single pin with the positiv mask
+    }
+  }
+  for(i = 0; i <= 8; i++)             //for loop which is used to cycle the masks
+  {
+    if(iStatePort[i] == 0)            //compare wanted state of pin with 0
+    {
+      P1 &= iMaskN[i];                //set single pin with the negativ mask
+    }
+  }
+}
 //use in main
 int main(void)
 {
