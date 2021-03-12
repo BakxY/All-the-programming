@@ -1,6 +1,6 @@
 Project: Template
 
-Author: A. Hofmann
+Author: AHO
 
 Date: 11.03.2021
 
