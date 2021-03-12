@@ -63,12 +63,12 @@ void BootLogo(void)
 		rectan(ix, iy, (ix+4), (iy+60), 1, BRIGHT_YELLOW, 1);
 	}
 	/*----------WINDOWS TEXT-----------*/
-	textxy("Windows 420", 40, 185, WHITE, BLACK);
-	textxy("Embedded Edition", 40, 198, WHITE, BLACK);
+	textxy("MS-DOS 4.20", 40, 190, WHITE, BLACK);
+	textxy("Embedded Edition", 40, 205, WHITE, BLACK);
 	/*----------COPYRIGHT TEXT---------*/
-	textxy("(c) Fischer & Brexit 2021", 0, 315, WHITE, BLACK);
+	textxy("(c) Fischer & Brexit 2021 (V2)", 0, 315, WHITE, BLACK);
 	/*----------LOADING POINTS---------*/
-	textxy("Windows is updating", 40, 235, WHITE, BLACK);
+	textxy("MS-DOS is updating", 40, 235, WHITE, BLACK);
 	textxy("Please dont shut off", 40, 250, WHITE, BLACK);
 	delayWorky(0xA00000);
 	textxy("o                10%", 40, 265, WHITE, BLACK);
