@@ -1,5 +1,8 @@
 void BootLogo(void)
 {
+	/*-----------VERSION TEXT----------*/
+	textxy("FischerTG_BootLogo_V3", 0, 315, WHITE, BLACK);
+	/*-----------VARIABLES-------------*/
 	int iCount = 0;
 	int ix, iy;
 	/*-----------RED SQUARE------------*/
@@ -65,8 +68,6 @@ void BootLogo(void)
 	/*----------WINDOWS TEXT-----------*/
 	textxy("MS-DOS 4.20", 40, 190, WHITE, BLACK);
 	textxy("Embedded Edition", 40, 205, WHITE, BLACK);
-	/*----------COPYRIGHT TEXT---------*/
-	textxy("(c) Fischer & Brexit 2021 (V2)", 0, 315, WHITE, BLACK);
 	/*----------LOADING POINTS---------*/
 	textxy("MS-DOS is updating", 40, 235, WHITE, BLACK);
 	textxy("Please dont shut off", 40, 250, WHITE, BLACK);
