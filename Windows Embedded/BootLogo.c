@@ -67,7 +67,7 @@ void BootLogo(void)
 	textxy("Embedded", 40, 198, WHITE, BLACK);
 	/*----------COPYRIGHT TEXT---------*/
 	textxy("(c) Fischer & Brexit 2021", 0, 315, WHITE, BLACK);
-	/*----------LOADING CIRCLE---------*/
+	/*----------LOADING POINTS---------*/
 	textxy("Windows is updating", 40, 235, WHITE, BLACK);
 	textxy("Please dont shut off", 40, 250, WHITE, BLACK);
 	delayWorky(0xA00000);
@@ -87,6 +87,7 @@ void BootLogo(void)
 	delayWorky(0xB00000); 
 	textxy("o o o o o o o o 101%", 40, 265, WHITE, BLACK);
 	delayWorky(0xA00000);
+	/*----------SUCCESS TEXT-----------*/
 	for(iCount = 0; iCount < 3; iCount++)
 	{
 		textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
