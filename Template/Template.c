@@ -23,7 +23,7 @@
 int main(void) 										//main function
 {
 	
-	InitTouchP0P1("1r");								//Display initialisation r -> rotated display
+	InitTouchP0P1("1rm");								//Display initialisation r -> rotated display
 	
 	while (1)
 	{
