@@ -63,8 +63,8 @@ void BootLogo(void)
 		rectan(ix, iy, (ix+4), (iy+60), 1, BRIGHT_YELLOW, 1);
 	}
 	/*----------WINDOWS TEXT-----------*/
-	textxy("Windows", 40, 185, WHITE, BLACK);
-	textxy("Embedded", 40, 198, WHITE, BLACK);
+	textxy("Windows 420", 40, 185, WHITE, BLACK);
+	textxy("Embedded Edition", 40, 198, WHITE, BLACK);
 	/*----------COPYRIGHT TEXT---------*/
 	textxy("(c) Fischer & Brexit 2021", 0, 315, WHITE, BLACK);
 	/*----------LOADING POINTS---------*/
@@ -95,4 +95,5 @@ void BootLogo(void)
 		textxy("           ", 40, 280, WHITE, BLACK);
 		delayWorky(0x800000);
 	}
+	clearScreen(BLACK);
 }
