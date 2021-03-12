@@ -1,4 +1,4 @@
-void BootScreen(void)
+void BootLogo(void)
 {
 	int iCount = 0;
 	int ix, iy;
