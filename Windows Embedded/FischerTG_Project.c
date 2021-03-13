@@ -1,3 +1,5 @@
+//komplete inebastlerei
+
 #include <stm32f10x.h>
 #include "TouchP0P1.h"
 
