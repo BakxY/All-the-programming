@@ -13,7 +13,7 @@ void delayWorky(int i)
 void BootLogo(void)
 {
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BootLogo_V4.1", 0, 315, WHITE, BLACK);
+	textxy("FischerTG_BootLogo_V4", 0, 315, WHITE, BLACK);
 	/*-----------VARIABLES-------------*/
 	int iCount = 0;
 	int ix, iy;
