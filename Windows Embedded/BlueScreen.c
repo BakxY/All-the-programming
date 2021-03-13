@@ -3,7 +3,7 @@ void BlueScreen(int iErrorCode)
 	clearScreen(BRIGHT_BLUE);
 	
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BlueScreen_V3", 0, 315, WHITE, BRIGHT_BLUE);
+	textxy("FischerTG_BlueScreen_V4", 0, 315, WHITE, BRIGHT_BLUE);
 	/*------------BSoD TEXT------------*/
 	textxy("    #       ##  ###     ##", 10, 30, WHITE, BRIGHT_BLUE);
 	textxy("o  #        # # #       # #", 10, 42, WHITE, BRIGHT_BLUE);
@@ -20,14 +20,19 @@ void BlueScreen(int iErrorCode)
 	textxy("triggered by: infinite loop", 10, 195, WHITE, BRIGHT_BLUE);
 	delayWorky(0x971B00);
 	/*----------ERROR CODE-------------*/
-	if(iErrorCode == 1)
+	switch(iErrorCode)
 	{
-		textxy("error-code: 360 dis button", 10, 250, WHITE, BRIGHT_BLUE);
+		case 1:
+			textxy("error-code: 360 dis button", 10, 250, WHITE, BRIGHT_BLUE);
+			break;
+		case 2:
+			textxy("error-code: gg eZ locked out", 10, 250, WHITE, BRIGHT_BLUE);
+			break;
+		default:
+			textxy("error-code: 404 not found", 10, 250, WHITE, BRIGHT_BLUE);
+			break;
 	}
-	else
-	{
-		textxy("error-code: 404 not found", 10, 250, WHITE, BRIGHT_BLUE);	
-	}
+
 	delayWorky(0xEE3600);
 	clearScreen(BLACK);
 }
