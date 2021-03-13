@@ -3,7 +3,7 @@ void BlueScreen(void)
 	clearScreen(BRIGHT_BLUE);
 	
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BlueScreen_V1", 0, 315, WHITE, BRIGHT_BLUE);
+	textxy("FischerTG_BlueScreen_V2", 0, 315, WHITE, BRIGHT_BLUE);
 	/*------------BSoD TEXT------------*/
 	textxy("    #       ##  ###     ##", 10, 30, WHITE, BRIGHT_BLUE);
 	textxy("o  #        # # #       # #", 10, 42, WHITE, BRIGHT_BLUE);
