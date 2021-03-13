@@ -1,5 +1,7 @@
-void delayWorky(int i)
+void delayWorky(int time)
 {
-	int x = 0;
-	while(x < i){x++;}
+	while(time--) //do until time = 0
+	{
+        __nop(); //uC skipps 1 cycle of operation
+	}
 }
