@@ -5,11 +5,11 @@ void BlueScreen(void)
 	/*-----------VERSION TEXT----------*/
 	textxy("FischerTG_BlueScreen_V2", 0, 315, WHITE, BRIGHT_BLUE);
 	/*------------BSoD TEXT------------*/
-	textxy("    #       ##  ###     ##", 10, 30, WHITE, BRIGHT_BLUE);
+	textxy("    #       ##  ###     ## ", 10, 30, WHITE, BRIGHT_BLUE);
 	textxy("o  #        # # #       # #", 10, 42, WHITE, BRIGHT_BLUE);
 	textxy("   #        ##  ### ### # #", 10, 54, WHITE, BRIGHT_BLUE);
 	textxy("o  #        # #   # # # # #", 10, 66, WHITE, BRIGHT_BLUE);
-	textxy("    #       ##  ### ### ##", 10, 78, WHITE, BRIGHT_BLUE);
+	textxy("    #       ##  ### ### ## ", 10, 78, WHITE, BRIGHT_BLUE);
 	/*-------------RESTART-------------*/
 	textxy("your uController has ran in", 10, 110, WHITE, BRIGHT_BLUE);
 	textxy("a problem and needs restart", 10, 125, WHITE, BRIGHT_BLUE);
