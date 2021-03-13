@@ -4,7 +4,7 @@ int yx[2] = {1, 0};
 
 void Bash(void)
 {
-  textxy("BakxY_Bash_V3", 0, 315, WHITE, BLACK);
+  textxy("BakxY_Bash_V4", 0, 315, WHITE, BLACK);
   
   int iInput;
   int iStatus[8];
@@ -23,23 +23,26 @@ void Bash(void)
 		if(iStatus[0] == 1 && yx[0] != 1)
 		{
 			yx[0] -= 16;
-			delayWorky(0x3FFF00);
+			rectan(yx[1], yx[0], yx[1]+8, yx[0]+14, 2, BRIGHT_RED, 0);
+			delayWorky(0x5B8D80);
 		}
 		else if(iStatus[1] == 1 && yx[0] <= 280)
 		{
 			yx[0] += 16;
-			delayWorky(0x3FFF00);
+			rectan(yx[1], yx[0], yx[1]+8, yx[0]+14, 2, BRIGHT_RED, 0);
+			delayWorky(0x5B8D80);
 		}
 		else if(iStatus[2] == 1 && yx[1] <= 230)
 		{
 			yx[1] += 8;
-			delayWorky(0x3F0000);
+			rectan(yx[1], yx[0], yx[1]+8, yx[0]+14, 2, BRIGHT_RED, 0);
+			delayWorky(0xB71B0);
 		} 
 		else if(iStatus[3] == 1 && yx[1] >= 8)
 		{
 			yx[1] -= 8;
-			delayWorky(0x3F0000);
+			rectan(yx[1], yx[0], yx[1]+8, yx[0]+14, 2, BRIGHT_RED, 0);
+			delayWorky(0xB71B0);
 		}
-		rectan(yx[1], yx[0], yx[1]+8, yx[0]+14, 2, BRIGHT_RED, 0);
 	}
 }
