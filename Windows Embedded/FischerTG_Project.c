@@ -4,16 +4,17 @@
 unsigned int x = 8; //These need to be global variables
 unsigned int y = 1;
 
-void delayWorky(int i)
+void delayWorky(int time)
 {
-	int x = 0;
-	while(x < i){x++;}
+	while(time--) //do until time = 0
+	{
+        __nop(); //uC skipps 1 cycle of operation
+	}
 }
-
 void BootLogo(void)
 {
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BootLogo_V4", 0, 315, WHITE, BLACK);
+	textxy("FischerTG_BootLogo_V5", 0, 315, WHITE, BLACK);
 	/*-----------VARIABLES-------------*/
 	int iCount = 0;
 	int ix, iy;
@@ -83,26 +84,26 @@ void BootLogo(void)
 	/*----------LOADING POINTS---------*/
 	textxy("MS-DOS is updating", 40, 235, WHITE, BLACK);
 	textxy("Please dont shut off", 40, 250, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o                10%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o              21%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o            38%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o          51%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o o        69%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o o o      88%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o o o o    99%", 40, 265, WHITE, BLACK);
-	delayWorky(0xB00000); 
+	delayWorky(0x1F71B00); 
 	textxy("o o o o o o o o 101%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	/*----------SUCCESS TEXT-----------*/
 	textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
-	delayWorky(0x800000);
+	delayWorky(0xEE3600);
 	
 	clearScreen(BLACK);
 }
@@ -110,7 +111,7 @@ void BootLogo(void)
 void SystemCheck(void)
 {
 	/*----------VERSION TEXT----------*/
-	textxy("FischerTG_SystemCheck_V2.1", 0, 315, WHITE, BLACK);
+	textxy("FischerTG_SystemCheck_V3", 0, 315, WHITE, BLACK);
 	/*-----------VARIABLES------------*/
 	int iCount;
 	int iMCount = 1;
@@ -123,13 +124,13 @@ void SystemCheck(void)
 		setTextcolor(WHITE);
 	/*----------SPINNI BOY-----------*/
 		printAt(3, "/");
-		delayWorky(0x100000);
+		delayWorky(0xDC6C0);
 		printAt(3, "-");
-		delayWorky(0x100000);
+		delayWorky(0xDC6C0);
 		printAt(3, "\\");
-		delayWorky(0x100000);
+		delayWorky(0xDC6C0);
 		printAt(3, "|");
-		delayWorky(0x100000);
+		delayWorky(0xDC6C0);
 	/*------------LOADING------------*/
 		iMCount = iCount;
 		while(iMCount > 0)
@@ -168,7 +169,7 @@ void SystemCheck(void)
 				break;
 			case 10:
 				printAt(15, "All OK starting OS");
-				delayWorky(0xF00000);
+				delayWorky(0xEE3600);
 				clearScreen(BLACK);
 				break;
 			default:
@@ -182,7 +183,7 @@ void BlueScreen(int iErrorCode)
 	clearScreen(BRIGHT_BLUE);
 	
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BlueScreen_V1", 0, 315, WHITE, BRIGHT_BLUE);
+	textxy("FischerTG_BlueScreen_V2", 0, 315, WHITE, BRIGHT_BLUE);
 	/*------------BSoD TEXT------------*/
 	textxy("    #       ##  ###     ##", 10, 30, WHITE, BRIGHT_BLUE);
 	textxy("o  #        # # #       # #", 10, 42, WHITE, BRIGHT_BLUE);
@@ -192,12 +193,12 @@ void BlueScreen(int iErrorCode)
 	/*-------------RESTART-------------*/
 	textxy("your uController has ran in", 10, 110, WHITE, BRIGHT_BLUE);
 	textxy("a problem and needs restart", 10, 125, WHITE, BRIGHT_BLUE);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	/*----------ERROR TEXT-------------*/
 	textxy("an exception has occurred at", 10, 165, WHITE, BRIGHT_BLUE);
 	textxy("0x07FA'884A OVERFLOW ERROR", 10, 180, WHITE, BRIGHT_BLUE);
 	textxy("triggered by: infinite loop", 10, 195, WHITE, BRIGHT_BLUE);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	/*----------ERROR CODE-------------*/
 	if(iErrorCode == 1)
 	{
@@ -207,51 +208,8 @@ void BlueScreen(int iErrorCode)
 	{
 		textxy("error-code: 404 not found", 10, 250, WHITE, BRIGHT_BLUE);	
 	}
-	delayWorky(0xF00000);
+	delayWorky(0xEE3600);
 	clearScreen(BLACK);
-}
-
-void Bash(void)
-{
-  textxy("BakxY_Bash_V3", 0, 315, WHITE, BLACK);
-
-  int iInput;
-  int iStatus[8];
-
-  /*---------Reading PORT-----------*/
-  iInput = GPIOGetByte("PDH");
-  iStatus[0] = !((1 >> (iInput & 0x10)) == (1 >> 0x10)); //Up
-  iStatus[1] = !((1 >> (iInput & 0x40)) == (1 >= 0x40)); //Down
-  iStatus[2] = !((1 >> (iInput & 0x08)) == (1 >> 0x08)); //Right
-  iStatus[3] = !((1 >> (iInput & 0x20)) == (1 >= 0x20)); //Left
-
-  rectan(x, y, x+8, y+14, 2, BRIGHT_RED, 0);
-
-  /*-------Setting x and y----------*/
-  if(iStatus[0] == 1 && y != 1)
-  {
-    rectan(x, y, x+8, y+14, 2, BLACK, 0);
-    y -= 16;
-    delayWorky(0x3FFF00);
-  }
-  else if(iStatus[1] == 1 && y <= 280)
-  {
-    rectan(x, y, x+8, y+14, 2, BLACK, 0);
-    y += 16;
-    delayWorky(0x3FFF00);
-  }
-  else if(iStatus[2] == 1 && x <= 230)
-  {
-    rectan(x, y, x+8, y+14, 2, BLACK, 0);
-    x += 8;
-    delayWorky(0x3F0000);
-  } 
-  else if(iStatus[3] == 1 && x >= 9)
-  {
-    rectan(x, y, x+8, y+14, 2, BLACK, 0);
-    x -= 8;
-    delayWorky(0x3F0000);
-  }
 }
 
 int main(void)
