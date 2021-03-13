@@ -101,13 +101,9 @@ void BootLogo(void)
 	textxy("o o o o o o o o 101%", 40, 265, WHITE, BLACK);
 	delayWorky(0xA00000);
 	/*----------SUCCESS TEXT-----------*/
-	for(iCount = 0; iCount < 3; iCount++)
-	{
-		textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
-		delayWorky(0x800000);
-		textxy("           ", 40, 280, WHITE, BLACK);
-		delayWorky(0x800000);
-	}
+	textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
+	delayWorky(0x800000);
+	
 	clearScreen(BLACK);
 }
 
@@ -124,6 +120,7 @@ void SystemCheck(void)
 	
 	while(iCount < 10)
 	{
+		setTextcolor(WHITE);
 	/*----------SPINNI BOY-----------*/
 		printAt(3, "/");
 		delayWorky(0x100000);
@@ -142,6 +139,7 @@ void SystemCheck(void)
 		}
 		iCount++;
 	/*-----------CHECK TEST----------*/
+		setTextcolor(BRIGHT_GREEN);
 		switch(iCount)
 		{
 			case 2:
