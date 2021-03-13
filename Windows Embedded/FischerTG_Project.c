@@ -1,8 +1,6 @@
 #include <stm32f10x.h>
 #include "TouchP0P1.h"
 
-int Opfer = 1;
-
 void delayWorky(int time)
 {
 	while(time--) //do until time = 0
@@ -11,34 +9,48 @@ void delayWorky(int time)
 	}
 }
 
-void Login(void)
-{
+void BlueScreen(int iErrorCode)
+{	
+	clearScreen(BRIGHT_BLUE);
+	
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_Login_V1.1", 0, 315, WHITE, BLACK);
-	/*-----------VARIABLES-------------*/
-	char *cUser = "User";
-	char *cPass = "Pass";
-	/*----------WELCOME TEXT-----------*/
-	textxy("#  # ### #   #   ###    ### ", 8, 15, WHITE, BLACK);
-	textxy("#  # #   #   #   # #  # #  #", 8, 30, WHITE, BLACK);
-	textxy("#### ##  #   #   # #    #  #", 8, 45, WHITE, BLACK);
-	textxy("#  # #   #   #   # #  # #  #", 8, 60, WHITE, BLACK);
-	textxy("#  # ### ### ### ###    ### ", 8, 75, WHITE, BLACK);
-	/*-----------LOGIN LOGO------------*/
-	circle(120, 120, 15, 4, WHITE, 0);
-	circle(120, 165, 30, 4, WHITE, 0);
-	rectan(80, 165, 160, 200, 1, BLACK, 1);
-	circle(120, 140, 50, 4, WHITE, 0);
-	/*-----------LOGIN TEXT------------*/
-	textxy("Username:", 50, 220, WHITE, BLACK);
-	textxy(cUser, 125, 220, WHITE, BLACK);
-	textxy("Password:", 50, 235, WHITE, BLACK);
-	textxy(cPass, 125, 235, WHITE, BLACK);
+	textxy("FischerTG_BlueScreen_V4", 0, 315, WHITE, BRIGHT_BLUE);
+	/*------------BSoD TEXT------------*/
+	textxy("    #       ##  ###     ##", 10, 30, WHITE, BRIGHT_BLUE);
+	textxy("o  #        # # #       # #", 10, 42, WHITE, BRIGHT_BLUE);
+	textxy("   #        ##  ### ### # #", 10, 54, WHITE, BRIGHT_BLUE);
+	textxy("o  #        # #   # # # # #", 10, 66, WHITE, BRIGHT_BLUE);
+	textxy("    #       ##  ### ### ##", 10, 78, WHITE, BRIGHT_BLUE);
+	/*-------------RESTART-------------*/
+	textxy("your uController has ran in", 10, 110, WHITE, BRIGHT_BLUE);
+	textxy("a problem and needs restart", 10, 125, WHITE, BRIGHT_BLUE);
+	delayWorky(0x971B00);
+	/*----------ERROR TEXT-------------*/
+	textxy("an exception has occurred at", 10, 165, WHITE, BRIGHT_BLUE);
+	textxy("0x07FA'884A OVERFLOW ERROR", 10, 180, WHITE, BRIGHT_BLUE);
+	textxy("triggered by: infinite loop", 10, 195, WHITE, BRIGHT_BLUE);
+	delayWorky(0x971B00);
+	/*----------ERROR CODE-------------*/
+	switch(iErrorCode)
+	{
+		case 1:
+			textxy("error-code: 360 dis button", 10, 250, WHITE, BRIGHT_BLUE);
+			break;
+		case 2:
+			textxy("error-code: gg eZ locked out", 10, 250, WHITE, BRIGHT_BLUE);
+			break;
+		default:
+			textxy("error-code: 404 not found", 10, 250, WHITE, BRIGHT_BLUE);
+			break;
+	}
+
+	delayWorky(0xEE3600);
+	clearScreen(BLACK);
 }
 
 int main(void)
 {	
 	InitTouchScreen();
 	
-	Login();
+	BlueScreen(2);
 }
