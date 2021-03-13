@@ -1,7 +1,7 @@
 void BootLogo(void)
 {
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BootLogo_V4", 0, 315, WHITE, BLACK);
+	textxy("FischerTG_BootLogo_V4.1", 0, 315, WHITE, BLACK);
 	/*-----------VARIABLES-------------*/
 	int iCount = 0;
 	int ix, iy;
@@ -89,12 +89,8 @@ void BootLogo(void)
 	textxy("o o o o o o o o 101%", 40, 265, WHITE, BLACK);
 	delayWorky(0xA00000);
 	/*----------SUCCESS TEXT-----------*/
-	for(iCount = 0; iCount < 3; iCount++)
-	{
-		textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
-		delayWorky(0x800000);
-		textxy("           ", 40, 280, WHITE, BLACK);
-		delayWorky(0x800000);
-	}
+	textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
+	delayWorky(0x800000);
+	
 	clearScreen(BLACK);
 }
