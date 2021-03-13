@@ -1,7 +1,7 @@
 void SystemCheck(void)
 {
 	/*----------VERSION TEXT----------*/
-	textxy("FischerTG_SystemCheck_V2", 0, 315, WHITE, BLACK);
+	textxy("FischerTG_SystemCheck_V2.1", 0, 315, WHITE, BLACK);
 	/*-----------VARIABLES------------*/
 	int iCount;
 	int iMCount = 1;
@@ -11,6 +11,7 @@ void SystemCheck(void)
 	
 	while(iCount < 10)
 	{
+		setTextcolor(WHITE);
 	/*----------SPINNI BOY-----------*/
 		printAt(3, "/");
 		delayWorky(0x100000);
@@ -29,6 +30,7 @@ void SystemCheck(void)
 		}
 		iCount++;
 	/*-----------CHECK TEST----------*/
+		setTextcolor(BRIGHT_GREEN);
 		switch(iCount)
 		{
 			case 2:
