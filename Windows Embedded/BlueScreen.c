@@ -20,7 +20,14 @@ void BlueScreen(void)
 	textxy("triggered by: infinite loop", 10, 195, WHITE, BRIGHT_BLUE);
 	delayWorky(0xA00000);
 	/*----------ERROR CODE-------------*/
-	textxy("error-code: 404 not found", 10, 250, WHITE, BRIGHT_BLUE);
+	if(iErrorCode == 1)
+	{
+		textxy("error-code: 360 dis button", 10, 250, WHITE, BRIGHT_BLUE);
+	}
+	else
+	{
+		textxy("error-code: 404 not found", 10, 250, WHITE, BRIGHT_BLUE);	
+	}
 	delayWorky(0xF00000);
 	clearScreen(BLACK);
 }
