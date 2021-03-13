@@ -1,7 +1,7 @@
 void BootLogo(void)
 {
 	/*-----------VERSION TEXT----------*/
-	textxy("FischerTG_BootLogo_V4.1", 0, 315, WHITE, BLACK);
+	textxy("FischerTG_BootLogo_V5", 0, 315, WHITE, BLACK);
 	/*-----------VARIABLES-------------*/
 	int iCount = 0;
 	int ix, iy;
@@ -71,26 +71,26 @@ void BootLogo(void)
 	/*----------LOADING POINTS---------*/
 	textxy("MS-DOS is updating", 40, 235, WHITE, BLACK);
 	textxy("Please dont shut off", 40, 250, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o                10%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o              21%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o            38%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o          51%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o o        69%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o o o      88%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	textxy("o o o o o o o    99%", 40, 265, WHITE, BLACK);
-	delayWorky(0xB00000); 
+	delayWorky(0x1F71B00); 
 	textxy("o o o o o o o o 101%", 40, 265, WHITE, BLACK);
-	delayWorky(0xA00000);
+	delayWorky(0x971B00);
 	/*----------SUCCESS TEXT-----------*/
 	textxy("SUCCESS !!!", 40, 280, WHITE, BLACK);
-	delayWorky(0x800000);
+	delayWorky(0xEE3600);
 	
 	clearScreen(BLACK);
 }
