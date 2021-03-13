@@ -21,4 +21,7 @@ void Login(void)
 	textxy(cUser, 125, 220, WHITE, BLACK);
 	textxy("Password:", 50, 235, WHITE, BLACK);
 	textxy(cPass, 125, 235, WHITE, BLACK);
+	delayWorky(0xEE3600);
+	
+	clearScreen(BLACK);
 }
