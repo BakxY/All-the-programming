@@ -9,4 +9,4 @@ Thu. 11.03.2021:
 
 Fri. 12.03.2021:
   1. Programming on exampels for basic coding (Aufgaben EINSTIEG.doc)
-  2. Getting convertible using the uC Board
+  2. Getting familiar with the uC Board
