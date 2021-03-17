@@ -15,10 +15,8 @@
 #define false 0
 /*----------Variables---------------*/
 //local variables are prefered
-
-/*----------User functions----------*/
-//found in GIT user_functions.c
-
+/*----------Prototypes--------------*/
+//prototypes for user functions
 /*----------User code---------------*/
 int main(void) 										//main function
 {
@@ -30,3 +28,6 @@ int main(void) 										//main function
 		//write epic 10/10 code here
 	}
 }
+
+/*----------User functions----------*/
+//found in AtP/Template/User_functions.c
