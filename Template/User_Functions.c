@@ -25,8 +25,3 @@ void OutputPort(int iStatePort[])
     }
   }
 }
-//use in main
-int main(void)
-{
-	
-}
