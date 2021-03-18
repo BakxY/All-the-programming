@@ -10,3 +10,10 @@ Thu. 11.03.2021:
 Fri. 12.03.2021:
   1. Programming on exampels for basic coding (Aufgaben EINSTIEG.doc)
   2. Getting familiar with the uC Board
+
+Wed. 17.03.2021:
+  1. Panel about edge detection and runtime counter
+  2. Programming examples for edge detection and runtime counter
+
+Thu. 18.03.2021:
+  1. Panel about software testing
