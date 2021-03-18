@@ -17,3 +17,4 @@ Wed. 17.03.2021:
 
 Thu. 18.03.2021:
   1. Panel about software testing
+  2. Training with old exam examples
