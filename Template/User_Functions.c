@@ -21,3 +21,19 @@ int EdgeDet(int* iStatusOld, int* iStatusNew, int iEdgeType)	//function for edge
 	}
 	return(0);													//return 0 if it doesn't have a flag
 }
+/*-----Function for reading full port-----*/
+void ReadPort(int* iPin0, int* iPin1, int* iPin2, int* iPin3, int* iPin4, int* iPin5, int* iPin6, int* iPin7)
+{
+	int iPort;
+	
+	iPort = P0;
+	
+	*iPin0 = 0x01;
+	*iPin1 = 0x02 >> 1;
+	*iPin2 = 0x04 >> 2;
+	*iPin3 = 0x08 >> 3;
+	*iPin4 = 0x10 >> 4;
+	*iPin5 = 0x20 >> 5;
+	*iPin6 = 0x40 >> 6;
+	*iPin7 = 0x80 >> 7;
+}
