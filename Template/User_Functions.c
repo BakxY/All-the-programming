@@ -6,26 +6,22 @@ int ReadPin(int iPin)								//function for reading pin input
 	iStatus = (1 >> (P0 & iMask[iPin])) == (1 >> iMask[iPin]);	//get status of selected pin
 	return(iStatus);                  //returning pin status
 }
-/*-----Function for setting full PORT from array-----*/
-void OutputPort(int iStatePort[])
+/*-----Function for edge detection-----*/
+int EdgeDet(int* iStatusOld, int* iStatusNew, int iEdgeType)	//function for edge detection (iEdgeType -> 0 = NEG / 1 = POS)
 {
-  int iMaskP[] = {0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01};  //array for masks which are used to set the port to 1
-  int iMaskN[] = {0x7F, 0xBF, 0xDF, 0xEF, 0xF7, 0xFB, 0xFD, 0xFE};  //array for masks which are used to set the port to 0
-  int iCount;                              //placeholder variable for the for loops
-  
-  for(iCount = 0; iCount <= 8; iCount++)             //for loop which is used to cycle the masks 
-  {
-    if(iStatePort[iCount] == 1)            //compare wanted state of pin with 1
-    {
-      P1 |= iMaskP[iCount];                //set single pin with the positiv mask
-    }
-    else if(iStatePort[iCount] == 0)
-    {
-      P1 &= iMaskN[iCount];                //set single pin with the negativ mask
-    }
-  }
+	if(*iStatusOld != *iStatusNew)								//compare old status to new status
+	{
+		if(*iStatusNew == iEdgeType)							//check for positive or negative edge (dependent on iEdgeType)
+		{
+			*iStatusOld = *iStatusNew;	
+			return(1);											//return 1 if it has an edge
+		}
+		
+		*iStatusOld = *iStatusNew;								//set old status to new status
+	}
+	return(0);													//return 0 if it doesn't have a flag
 }
-
+/*-----Function for reading full port-----*/
 void ReadPort(int* iPin0, int* iPin1, int* iPin2, int* iPin3, int* iPin4, int* iPin5, int* iPin6, int* iPin7)
 {
 	int iPort;
