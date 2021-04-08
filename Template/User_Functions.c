@@ -37,3 +37,21 @@ void ReadPort(int* iPin0, int* iPin1, int* iPin2, int* iPin3, int* iPin4, int* i
 	*iPin6 = 0x40 >> 6;
 	*iPin7 = 0x80 >> 7;
 }
+
+/*-----Function for blinking LED-----*/
+int BlinkLED(int iOn, int iOff, int* iTimer)	//function for LED blinking
+{
+	if(*iTimer < iOn)							//check if timer reached value of iOn
+	{
+		return(1);								//return status 1
+	}
+	else if(*iTimer < (iOn + iOff))				//check if timer reached value of iOn + iOff
+	{
+		return(0);								//return status 0
+	}
+	else										//else for if the if isn't true
+	{
+		*iTimer = 0;							//reset timer
+		return(0);								//return status 0
+	}
+}
