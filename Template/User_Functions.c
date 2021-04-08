@@ -35,7 +35,22 @@ void ReadPort(int *iStatusArray)      //function for reading a full port into po
     iStatusArray[iCounter] = (P0 & (0x01 << iCounter)) >> iCounter; //reading port, masking and shiffting
   }
 }
-
+/*-----Function for sending full port-----*/
+void SendPort(int *iStatusArray)					//function for sending full port from a pointer array
+{
+	int iCounter;									//decleration of iCounter
+	for(iCounter = 0; iCounter <= 7; iCounter++)	//for loop for sending status to pins
+	{
+		if(iStatusArray[iCounter] == 1)				//check if the status is 1
+		{
+			P1 |= (0x01 << iCounter);				//write mask for 1 on port 1
+		}
+		else										//else for if the if isn't true
+		{
+			P1 &= ((0x01 << iCounter) ^ 0xFF);		//write mask for 0 on port 1
+		}
+	}
+}
 /*-----Function for blinking LED-----*/
 int BlinkLED(int iOn, int iOff, int* iTimer)	//function for LED blinking
 {
