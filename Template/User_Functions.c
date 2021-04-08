@@ -16,10 +16,15 @@ int EdgeDet(int* iStatusOld, int* iStatusNew, int iEdgeType)	//function for edge
 			*iStatusOld = *iStatusNew;	
 			return(1);											//return 1 if it has an edge
 		}
-		
-		*iStatusOld = *iStatusNew;								//set old status to new status
+		else
+		{
+			*iStatusOld = *iStatusNew;								//set old status to new status
+		}
 	}
-	return(0);													//return 0 if it doesn't have a flag
+	else
+	{
+		return(0);													//return 0 if it doesn't have a flag
+	}
 }
 /*-----Function for reading full port-----*/
 void ReadPort(int* iPin0, int* iPin1, int* iPin2, int* iPin3, int* iPin4, int* iPin5, int* iPin6, int* iPin7)
