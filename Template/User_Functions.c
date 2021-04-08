@@ -27,18 +27,11 @@ int EdgeDet(int* iStatusOld, int* iStatusNew, int iEdgeType)	//function for edge
 	}
 }
 /*-----Function for reading full port-----*/
-void ReadPort(int* iPin0, int* iPin1, int* iPin2, int* iPin3, int* iPin4, int* iPin5, int* iPin6, int* iPin7)
-{
-	int iPort;
-	
-	iPort = P0;
-	
-	*iPin0 = 0x01;
-	*iPin1 = 0x02 >> 1;
-	*iPin2 = 0x04 >> 2;
-	*iPin3 = 0x08 >> 3;
-	*iPin4 = 0x10 >> 4;
-	*iPin5 = 0x20 >> 5;
-	*iPin6 = 0x40 >> 6;
-	*iPin7 = 0x80 >> 7;
+void ReadPort(int *iStatusArray)      //function for reading a full port into pointer array
+{ 
+  int iCounter;                       //decleration of iCounter
+  for(iCounter = 0; iCounter <= 7; iCounter++) //for loop for reading pins and storing in array
+  {
+    iStatusArray[iCounter] = (P0 & (0x01 << iCounter)) >> iCounter; //reading port, masking and shiffting
+  }
 }
