@@ -35,3 +35,21 @@ void ReadPort(int *iStatusArray)      //function for reading a full port into po
     iStatusArray[iCounter] = (P0 & (0x01 << iCounter)) >> iCounter; //reading port, masking and shiffting
   }
 }
+
+/*-----Function for blinking LED-----*/
+int BlinkLED(int iOn, int iOff, int* iTimer)	//function for LED blinking
+{
+	if(*iTimer < iOn)							//check if timer reached value of iOn
+	{
+		return(1);								//return status 1
+	}
+	else if(*iTimer < (iOn + iOff))				//check if timer reached value of iOn + iOff
+	{
+		return(0);								//return status 0
+	}
+	else										//else for if the if isn't true
+	{
+		*iTimer = 0;							//reset timer
+		return(0);								//return status 0
+	}
+}
