@@ -51,6 +51,15 @@ void SendPort(int *iStatusArray)					//function for sending full port from a poi
 		}
 	}
 }
+/*-----Function for clearing full array-----*/
+void ClearArray(int *iStatusArray)					//function for clearing an array
+{ 
+  int iCounter;             						//declaration of iCounter          
+  for(iCounter = 0; iCounter <= 7; iCounter++)		//for loop for setting array to 0
+  {
+    iStatusArray[iCounter] = 0;						//set selected array to 0
+  }
+}
 /*-----Function for blinking LED-----*/
 int BlinkLED(int iOn, int iOff, int* iTimer)	//function for LED blinking
 {
