@@ -18,5 +18,5 @@ int EdgeDet(int*, int*, int);			//Prototype for edge detection function
 void ReadPort(int*);					//Prototype for ReadPort function
 int BlinkLED(int, int, int*);			//Prototype for BlinkLED function
 void SendPort(int*);					//Prototype for SendPort function
-
+void ClearArray(int*);					//Prototype for ClearPort function
 #endif
