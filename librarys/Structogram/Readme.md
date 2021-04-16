@@ -1,1 +1,1 @@
-These are the Structogams for the functions used in the MCB32D library
+These are the Structograms for the functions used in the MCB32D library
