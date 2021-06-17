@@ -152,7 +152,7 @@ void MCB32D_InitLED(void)				//function for initialising GPIOs for correct LED b
 {
 	GPIOE->CRH = 0x33333333;			//configurate pins E8 - E15 to push-pull and 50MHz update rate
 	
-	GPIOE->ODR = 0xFF00;				//set pins E8 - E15 1
+	GPIOE->ODR = 0xFF00;				//set PORT E 0xFF00
 	delay_ms(500);						//wait 500ms
-	GPIOE->ODR = 0x0000;				//set pins E8 - E15 0
+	GPIOE->ODR = 0x0000;				//set PORT e 0x0000
 }
