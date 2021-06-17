@@ -143,7 +143,7 @@ void vClearArray(int iStatusArray[8])				//function for clearing an array, iStat
 }
 
 /*---------------------------------------
-* Function: vMCB32D_InitLED				*
+* Function: MCB32D_InitLED				*
 * Autor:    Alessandro Hofmann			*
 * Date:     17.06.2021					*
 * Desc: 	Initialise GPIOs for LEDs	*
